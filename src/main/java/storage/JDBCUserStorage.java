@@ -1,16 +1,14 @@
 package storage;
 
+import config.JdbcConnection;
 import domain.User;
 
 import java.sql.*;
 import java.util.Optional;
 
 public class JDBCUserStorage {
-    private final String url = "jdbc:postgresql://localhost:5432/coursework";
-    private final String userName = "postgres";
-    private final String password = "root";
     public void save(User user){
-        try (Connection connection = DriverManager.getConnection(url, userName, password);
+        try (Connection connection = JdbcConnection.getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement("INSERT INTO greeting VALUES (DEFAULT, ?, ?, ?, ?);")){
 
             preparedStatement.setString(1, user.getName());
@@ -25,7 +23,7 @@ public class JDBCUserStorage {
     }
 
     public Optional<User> getByUsername(String username){
-        try (Connection connection = DriverManager.getConnection(url, userName, password);
+        try (Connection connection = JdbcConnection.getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement("select * from greeting where userName = ?")){
 
             preparedStatement.setString(1, username);
