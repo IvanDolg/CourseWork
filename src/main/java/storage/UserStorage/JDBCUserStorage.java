@@ -1,4 +1,4 @@
-package storage;
+package storage.UserStorage;
 
 import config.JdbcConnection;
 import domain.User;
@@ -6,10 +6,22 @@ import domain.User;
 import java.sql.*;
 import java.util.Optional;
 
-public class JDBCUserStorage {
+public class JDBCUserStorage implements UserStorage{
+    private static JDBCUserStorage instance;
+
+    public JDBCUserStorage() {
+    }
+    public static JDBCUserStorage getInstance(){
+        if (instance == null){
+            instance = new JDBCUserStorage();
+        }
+        return instance;
+    }
+
+    @Override
     public void save(User user){
         try (Connection connection = JdbcConnection.getConnection();
-             PreparedStatement preparedStatement = connection.prepareStatement("INSERT INTO greeting VALUES (DEFAULT, ?, ?, ?, ?);")){
+             PreparedStatement preparedStatement = connection.prepareStatement("INSERT INTO \"human\" VALUES (DEFAULT, ?, ?, ?, ?);")){
 
             preparedStatement.setString(1, user.getName());
             preparedStatement.setString(2, user.getUserName());
@@ -22,9 +34,10 @@ public class JDBCUserStorage {
         }
     }
 
+    @Override
     public Optional<User> getByUsername(String username){
         try (Connection connection = JdbcConnection.getConnection();
-             PreparedStatement preparedStatement = connection.prepareStatement("select * from greeting where userName = ?")){
+             PreparedStatement preparedStatement = connection.prepareStatement("select * from \"human\" where userName = ?")){
 
             preparedStatement.setString(1, username);
             ResultSet resultSet = preparedStatement.executeQuery();

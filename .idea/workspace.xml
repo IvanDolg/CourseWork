@@ -10,12 +10,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="745b3e99-b523-4c2e-8743-0eb8bf99406e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/config/JdbcConnection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/settings.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/storage/UserStorage/UserStorage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/history.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/4f9c65fd-1405-4ae4-9806-d547d0c13e60.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/4f9c65fd-1405-4ae4-9806-d547d0c13e60.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/4f9c65fd-1405-4ae4-9806-d547d0c13e60/storage_v2/_src_/database/coursework.rCGHlA/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/4f9c65fd-1405-4ae4-9806-d547d0c13e60/storage_v2/_src_/database/coursework.rCGHlA/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/storage/JDBCUserStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/storage/JDBCUserStorage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/_header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/_header.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/LoginServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/RegistrationServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/RegistrationServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/SettingsServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/SettingsServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/storage/JDBCUserStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/storage/UserStorage/JDBCUserStorage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -180,11 +185,25 @@
       <workItem from="1695048238711" duration="1142000" />
       <workItem from="1695066915705" duration="671000" />
       <workItem from="1695337517507" duration="1337000" />
-      <workItem from="1695651486701" duration="4260000" />
+      <workItem from="1695651486701" duration="5527000" />
+      <workItem from="1695682077199" duration="265000" />
+      <workItem from="1695729584152" duration="1951000" />
     </task>
+    <task id="LOCAL-00001" summary="feat: add settings">
+      <created>1695680108063</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1695680108063</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat: add settings" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add settings" />
   </component>
 </project>

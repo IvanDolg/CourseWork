@@ -16,7 +16,7 @@ import java.sql.SQLException;
 
 @WebServlet("/settings")
 public class SettingsServlet extends HttpServlet {
-    private final String UPDATE_USER_DATA = "UPDATE \"greeting\" SET name = ?, username = ?, password = ?, role = ?\n" +
+    private final String UPDATE_USER_DATA = "UPDATE \"human\" SET name = ?, username = ?, password = ?, role = ?\n" +
                                             "WHERE id = ?";
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

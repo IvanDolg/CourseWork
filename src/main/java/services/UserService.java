@@ -1,11 +1,24 @@
 package services;
 
 import domain.User;
-import storage.JDBCUserStorage;
+import storage.UserStorage.JDBCUserStorage;
+import storage.UserStorage.UserStorage;
+
 import java.util.Optional;
 
 public class UserService {
-    private final JDBCUserStorage userStorage = new JDBCUserStorage();
+    private static UserService instance;
+    private final UserStorage userStorage = JDBCUserStorage.getInstance();
+
+    public static UserService getInstance(){
+        if (instance == null){
+            instance = new UserService();
+        }
+        return instance;
+    }
+
+    private UserService() {
+    }
 
     public void create(String name, String userName, String password, String role){
         User user = new User(name, userName, password, role);
