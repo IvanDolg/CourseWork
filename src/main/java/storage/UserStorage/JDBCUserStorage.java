@@ -8,7 +8,8 @@ import java.util.Optional;
 
 public class JDBCUserStorage implements UserStorage{
     private static JDBCUserStorage instance;
-
+    private final String SAVE_USER_DATA = "INSERT INTO \"human\" VALUES (DEFAULT, ?, ?, ?, ?);";
+    private final String GET_USER_DATA_BY_USERNAME =  "SELECT * FROM \"human\" WHERE userName = ?";
     public JDBCUserStorage() {
     }
     public static JDBCUserStorage getInstance(){
@@ -21,7 +22,7 @@ public class JDBCUserStorage implements UserStorage{
     @Override
     public void save(User user){
         try (Connection connection = JdbcConnection.getConnection();
-             PreparedStatement preparedStatement = connection.prepareStatement("INSERT INTO \"human\" VALUES (DEFAULT, ?, ?, ?, ?);")){
+             PreparedStatement preparedStatement = connection.prepareStatement(SAVE_USER_DATA)){
 
             preparedStatement.setString(1, user.getName());
             preparedStatement.setString(2, user.getUserName());
@@ -37,7 +38,7 @@ public class JDBCUserStorage implements UserStorage{
     @Override
     public Optional<User> getByUsername(String username){
         try (Connection connection = JdbcConnection.getConnection();
-             PreparedStatement preparedStatement = connection.prepareStatement("select * from \"human\" where userName = ?")){
+             PreparedStatement preparedStatement = connection.prepareStatement(GET_USER_DATA_BY_USERNAME)){
 
             preparedStatement.setString(1, username);
             ResultSet resultSet = preparedStatement.executeQuery();
