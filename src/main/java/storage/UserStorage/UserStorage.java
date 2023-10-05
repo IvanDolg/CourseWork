@@ -7,4 +7,5 @@ import java.util.Optional;
 public interface UserStorage {
     void save (User user);
     Optional<User> getByUsername(String username);
+    void updateById(User user);
 }

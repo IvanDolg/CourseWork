@@ -1,7 +1,8 @@
 package servlet;
 
+import domain.User;
 import services.UserService;
-import validation.UserDataValidation;
+import utils.Validator;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -13,7 +14,7 @@ import java.io.IOException;
 @WebServlet("/reg")
 public class RegistrationServlet extends HttpServlet {
     private final UserService userService = UserService.getInstance();
-    private final UserDataValidation validation = new UserDataValidation();
+    private final Validator validation = new Validator();
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
         getServletContext().getRequestDispatcher("/pages/reg.jsp").forward(req, resp);
@@ -21,12 +22,19 @@ public class RegistrationServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        User user = new User();
+
         String name = req.getParameter("name");
         String userName = req.getParameter("userName");
         String password = req.getParameter("password");
         String role = req.getParameter("role");
 
-        if (validation.nameValidation(name) && validation.passwordValidation(password)){
+        user.setName(name);
+        user.setUserName(userName);
+        user.setPassword(password);
+        user.setRole(role);
+
+        if (validation.validate(user)){
             userService.create(name, userName, password, role);
             resp.sendRedirect("/");
         } else {

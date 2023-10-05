@@ -2,7 +2,7 @@ package servlet;
 
 import services.UserService;
 import domain.User;
-import validation.UserDataValidation;
+import utils.UserDataValidation;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -32,7 +32,7 @@ public class LoginServlet extends HttpServlet {
             if (byUserName.isPresent()) {
                 User user = byUserName.get();
                 if (user.getPassword().equals(password)) {
-                    req.getSession().setAttribute("currentUser", user);
+                    req.getSession().setAttribute("user", user);
                     resp.sendRedirect("/");
                 } else {
                     resp.sendError(400, "Wrong password!!!");

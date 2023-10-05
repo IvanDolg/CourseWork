@@ -6,7 +6,37 @@ public class User {
     private String userName;
     private String password;
     private String role;
-    public User(String name, String userName, String password) {
+
+    private static UserBuilder builder(){
+        return new User().new UserBuilder();
+    }
+
+    public class UserBuilder{
+        private UserBuilder(){}
+        public UserBuilder setId(int id){
+            User.this.id = id;
+            return this;
+        }
+
+        public UserBuilder setName(String name){
+            User.this.name = name;
+            return this;
+        }
+
+        public  UserBuilder setUserName(String userName){
+            User.this.userName = userName;
+            return this;
+        }
+        public UserBuilder setPassword(String password){
+            User.this.password = password;
+            return this;
+        }
+        public  UserBuilder setRole(String role){
+            User.this.role = role;
+            return this;
+        }
+    }
+    /*public User(String name, String userName, String password) {
         this.name = name;
         this.userName = userName;
         this.password = password;
@@ -32,7 +62,7 @@ public class User {
         this.userName = userName;
         this.password = password;
         this.role = role;
-    }
+    }*/
 
     public String getRole() {
         return role;

@@ -10,17 +10,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="745b3e99-b523-4c2e-8743-0eb8bf99406e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/storage/UserStorage/UserStorage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/history.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/4f9c65fd-1405-4ae4-9806-d547d0c13e60.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/4f9c65fd-1405-4ae4-9806-d547d0c13e60.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/4f9c65fd-1405-4ae4-9806-d547d0c13e60/storage_v2/_src_/database/coursework.rCGHlA/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/4f9c65fd-1405-4ae4-9806-d547d0c13e60/storage_v2/_src_/database/coursework.rCGHlA/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/HelloSetvlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/HelloSetvlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/servlet/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/LoginServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/servlet/RegistrationServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/RegistrationServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/servlet/SettingsServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/SettingsServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/storage/JDBCUserStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/storage/UserStorage/JDBCUserStorage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/storage/UserStorage/JDBCUserStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/storage/UserStorage/JDBCUserStorage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/storage/UserStorage/UserStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/storage/UserStorage/UserStorage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/validation/UserDataValidation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/Validator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -188,6 +187,7 @@
       <workItem from="1695651486701" duration="5527000" />
       <workItem from="1695682077199" duration="265000" />
       <workItem from="1695729584152" duration="1951000" />
+      <workItem from="1696505232110" duration="3552000" />
     </task>
     <task id="LOCAL-00001" summary="feat: add settings">
       <created>1695680108063</created>
