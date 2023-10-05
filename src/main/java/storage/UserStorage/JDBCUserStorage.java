@@ -47,13 +47,21 @@ public class JDBCUserStorage implements UserStorage {
             preparedStatement.setString(1, username);
             ResultSet resultSet = preparedStatement.executeQuery();
             if (resultSet.next()) {
+                User user = new User();
+
                 int id = resultSet.getInt(1);
                 String name = resultSet.getString(2);
                 String username2 = resultSet.getString(3);
                 String password = resultSet.getString(4);
                 String role = resultSet.getString(5);
 
-                return Optional.of(new User(id, name, username2, password, role));
+                user.setName(name);
+                user.setUserName(username2);
+                user.setPassword(password);
+                user.setRole(role);
+                user.setId(id);
+
+                return Optional.of(new User());
             }
             return Optional.empty();
         } catch (SQLException e) {

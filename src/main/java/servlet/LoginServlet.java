@@ -3,6 +3,7 @@ package servlet;
 import services.UserService;
 import domain.User;
 import utils.UserDataValidation;
+import utils.Validator;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -15,7 +16,7 @@ import java.util.Optional;
 @WebServlet("/login")
 public class LoginServlet extends HttpServlet {
     private final UserService userService = UserService.getInstance();
-    private final UserDataValidation validation = new UserDataValidation();
+    private final Validator validation = new Validator();
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
         getServletContext().getRequestDispatcher("/pages/login.jsp").forward(req,resp);
@@ -26,7 +27,9 @@ public class LoginServlet extends HttpServlet {
         String userName = req.getParameter("userName");
         String password = req.getParameter("password");
 
-        if (validation.nameValidation(userName) && validation.passwordValidation(password)) {
+        
+
+        if (validation.validate(user)) {
             Optional<User> byUserName = userService.findByUsername(userName);
 
             if (byUserName.isPresent()) {
