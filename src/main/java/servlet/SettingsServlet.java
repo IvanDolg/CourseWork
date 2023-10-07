@@ -5,6 +5,7 @@ import domain.User;
 import services.UserService;
 import storage.UserStorage.JDBCUserStorage;
 import storage.UserStorage.UserStorage;
+import utils.Validator;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -19,6 +20,7 @@ import java.sql.SQLException;
 @WebServlet("/settings")
 public class SettingsServlet extends HttpServlet {
     private final UserStorage storage = JDBCUserStorage.getInstance();
+    private final Validator validator = new Validator();
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
            getServletContext().getRequestDispatcher("/pages/settings.jsp").forward(req, resp);
@@ -40,6 +42,10 @@ public class SettingsServlet extends HttpServlet {
         user.setUserName(username);
         user.setPassword(password);
         user.setRole(role);
+
+        if (!validator.validate(user)){
+            resp.sendRedirect("/pages/settings.jsp");
+        }
 
         storage.updateById(user);
         resp.sendRedirect("/pages/settings.jsp");

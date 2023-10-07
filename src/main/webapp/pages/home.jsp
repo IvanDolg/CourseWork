@@ -15,7 +15,7 @@
 </head>
 <body>
 <jsp:include page="_header.jsp"/>
-<h1>HI IT'S MY COURSE WORK</h1>
+<h1>HI IT'S IvanD COURSE WORK</h1>
 </div>
 </div>
 </body>

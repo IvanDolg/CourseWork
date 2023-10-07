@@ -2,7 +2,6 @@ package servlet;
 
 import services.UserService;
 import domain.User;
-import utils.UserDataValidation;
 import utils.Validator;
 
 import javax.servlet.ServletException;
@@ -24,16 +23,20 @@ public class LoginServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+       User user = new User();
+
         String userName = req.getParameter("userName");
         String password = req.getParameter("password");
 
-        
+        user.setUserName(userName);
+        user.setPassword(password);
 
         if (validation.validate(user)) {
             Optional<User> byUserName = userService.findByUsername(userName);
 
             if (byUserName.isPresent()) {
-                User user = byUserName.get();
+                user = byUserName.get();
+
                 if (user.getPassword().equals(password)) {
                     req.getSession().setAttribute("user", user);
                     resp.sendRedirect("/");

@@ -21,7 +21,7 @@ public class UserService {
     }
 
     public void create(String name, String userName, String password, String role){
-        User user = new User(name, userName, password, role);
+        User user = new User();
         userStorage.save(user);
     }
 
