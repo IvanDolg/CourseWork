@@ -42,7 +42,7 @@ public class SettingsServlet extends HttpServlet {
             resp.sendRedirect("/pages/settings.jsp");
         }
 
-        storage.updateById(user);
+        storage.update(user);
         resp.sendRedirect("/pages/settings.jsp");
        }
     }

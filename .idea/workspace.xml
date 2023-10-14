@@ -10,26 +10,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="745b3e99-b523-4c2e-8743-0eb8bf99406e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/scriots/insertTestData.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scriots/scheme.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/domain/City.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/domain/Country.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/storage/CityStorage/CityStorage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/storage/CityStorage/JdbcCityStorage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/storage/CountryStorage/CountryStorage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/storage/CountryStorage/JdbcCountryStorage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/4f9c65fd-1405-4ae4-9806-d547d0c13e60.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/4f9c65fd-1405-4ae4-9806-d547d0c13e60.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/4f9c65fd-1405-4ae4-9806-d547d0c13e60/storage_v2/_src_/database/coursework.rCGHlA/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/4f9c65fd-1405-4ae4-9806-d547d0c13e60/storage_v2/_src_/database/coursework.rCGHlA/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/servlet/SettingsServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/SettingsServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/storage/UserStorage/JDBCUserStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/storage/UserStorage/JdbcUserStorage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/_header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/_header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/reg.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/reg.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/storage/UserStorage/JdbcUserStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/storage/UserStorage/JdbcUserStorage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/storage/UserStorage/UserStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/storage/UserStorage/UserStorage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -207,7 +192,7 @@
       <workItem from="1696819911139" duration="1179000" />
       <workItem from="1696892700247" duration="3000" />
       <workItem from="1697316064474" duration="56000" />
-      <workItem from="1697316144719" duration="5814000" />
+      <workItem from="1697316144719" duration="7724000" />
     </task>
     <task id="LOCAL-00001" summary="feat: add settings">
       <created>1695680108063</created>
@@ -230,7 +215,15 @@
       <option name="project" value="LOCAL" />
       <updated>1696511523878</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="feat: update">
+      <option name="closed" value="true" />
+      <created>1697321979702</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1697321979702</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -238,7 +231,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat: add settings" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: add settings" />
+    <MESSAGE value="feat: update" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: update" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

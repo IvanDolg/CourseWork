@@ -1,17 +1,20 @@
 package storage.UserStorage;
 
 import config.JdbcConnection;
+import domain.Country;
 import domain.User;
 
 import java.sql.*;
+import java.util.Base64;
 import java.util.Optional;
 
 public class JdbcUserStorage implements UserStorage {
     private static JdbcUserStorage instance;
-    private final String SAVE_USER_DATA = "INSERT INTO \"human\" VALUES (DEFAULT, ?, ?, ?, ?);";
-    private final String GET_USER_DATA_BY_USERNAME = "SELECT * FROM \"human\" WHERE userName = ?";
-    private final String UPDATE_USER_DATA = "UPDATE \"human\" SET name = ?, username = ?, password = ?, role = ?\n" +
-            "WHERE id = ?";
+    private final String INSERT = "insert into \"human\" (name, surname, username, photo, email, password, role, country_id) values (?, ?, ?, ?, ?, ?, ?, ?)";
+    private final String GET_USER_DATA_BY_USERNAME = "select * from \"human\" join \"country\" on \"human\".country_id = \"country\".id where \"human\".id = ?";
+    private final String GET_BY_ID_WITH_COUNTRY = "select * from \"human\" join \"country\" on \"human\".country_id = \"country\".id where \"human\".id = ?";
+    private final String UPDATE_USER_DATA = "UPDATE human SET name = ?, surname = ?, username = ?, country_id = ?, photo = ?, email = ?, password = ?, role = ?\n" +
+                                            "WHERE id = ?";
 
     public JdbcUserStorage() {
     }
@@ -24,19 +27,59 @@ public class JdbcUserStorage implements UserStorage {
     }
 
     @Override
-    public void save(User user) {
+    public void add(User user) {
         try (Connection connection = JdbcConnection.getConnection();
-             PreparedStatement preparedStatement = connection.prepareStatement(SAVE_USER_DATA)) {
+             PreparedStatement preparedStatement = connection.prepareStatement(INSERT)) {
 
             preparedStatement.setString(1, user.getName());
-            preparedStatement.setString(2, user.getUserName());
-            preparedStatement.setString(3, user.getPassword());
-            preparedStatement.setString(4, user.getRole());
+            preparedStatement.setString(2, user.getSurname());
+            preparedStatement.setString(3, user.getUserName());
+            preparedStatement.setBytes(4, Base64.getDecoder().decode(user.getPhoto()));
+            preparedStatement.setString(5, user.getEmail());
+            preparedStatement.setString(6, user.getPassword());
+            preparedStatement.setString(7, user.getRole());
+            preparedStatement.setInt(8, user.getCountry().getId());
 
             preparedStatement.execute();
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    @Override
+    public Optional<User> getById(int id) {
+        try (Connection connection = JdbcConnection.getConnection()) {
+            PreparedStatement preparedStatement = connection.prepareStatement(GET_BY_ID_WITH_COUNTRY);
+            preparedStatement.setInt(1, id);
+
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            if (resultSet.next()) {
+                User user = new User();
+
+                user.setId(resultSet.getInt(1));
+                user.setName(resultSet.getString(2));
+                user.setSurname(resultSet.getString(3));
+                user.setUserName(resultSet.getString(4));
+                user.setPhoto(Base64.getEncoder().encodeToString(resultSet.getBytes(5)));
+                user.setEmail(resultSet.getString(6));
+                user.setPassword(resultSet.getString(7));
+                user.setRole(resultSet.getString(8));
+
+                Country country = new Country(
+                        resultSet.getInt(9),
+                        resultSet.getString(10)
+                );
+
+                user.setCountry(country);
+
+                return Optional.of(new User());
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return Optional.empty();
     }
 
     @Override
@@ -46,39 +89,48 @@ public class JdbcUserStorage implements UserStorage {
 
             preparedStatement.setString(1, username);
             ResultSet resultSet = preparedStatement.executeQuery();
+
             if (resultSet.next()) {
                 User user = new User();
 
-                int id = resultSet.getInt(1);
-                String name = resultSet.getString(2);
-                String username2 = resultSet.getString(3);
-                String password = resultSet.getString(4);
-                String role = resultSet.getString(5);
+                user.setId(resultSet.getInt(1));
+                user.setName(resultSet.getString(2));
+                user.setSurname(resultSet.getString(3));
+                user.setUserName(resultSet.getString(4));
+                user.setPhoto(Base64.getEncoder().encodeToString(resultSet.getBytes(5)));
+                user.setEmail(resultSet.getString(6));
+                user.setPassword(resultSet.getString(7));
+                user.setRole(resultSet.getString(8));
 
-                user.setName(name);
-                user.setUserName(username2);
-                user.setPassword(password);
-                user.setRole(role);
-                user.setId(id);
+                Country country = new Country(
+                        resultSet.getInt(9),
+                        resultSet.getString(10)
+                );
+
+                user.setCountry(country);
 
                 return Optional.of(new User());
             }
-            return Optional.empty();
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
+        return Optional.empty();
     }
 
     @Override
-    public void updateById(User user) {
+    public void update(User user) {
         try (Connection connection = JdbcConnection.getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(UPDATE_USER_DATA)) {
 
             preparedStatement.setString(1, user.getName());
-            preparedStatement.setString(2, user.getUserName());
-            preparedStatement.setString(3, user.getPassword());
-            preparedStatement.setString(4, user.getRole());
-            preparedStatement.setInt(5, user.getId());
+            preparedStatement.setString(2, user.getSurname());
+            preparedStatement.setString(3, user.getUserName());
+            preparedStatement.setInt(4, user.getCountry().getId());
+            preparedStatement.setBytes(5, Base64.getDecoder().decode(user.getPhoto()));
+            preparedStatement.setString(6, user.getEmail());
+            preparedStatement.setString(7, user.getPassword());
+            preparedStatement.setString(8, user.getRole());
+            preparedStatement.setInt(9, user.getId());
 
             preparedStatement.executeUpdate();
         } catch (SQLException e) {

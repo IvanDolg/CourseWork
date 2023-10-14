@@ -5,7 +5,8 @@ import domain.User;
 import java.util.Optional;
 
 public interface UserStorage {
-    void save (User user);
+    void add (User user);
+    Optional<User> getById(int id);
     Optional<User> getByUsername(String username);
-    void updateById(User user);
+    void update(User user);
 }
