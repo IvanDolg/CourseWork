@@ -1,14 +1,14 @@
 package services;
 
 import domain.User;
-import storage.UserStorage.JDBCUserStorage;
+import storage.UserStorage.JdbcUserStorage;
 import storage.UserStorage.UserStorage;
 
 import java.util.Optional;
 
 public class UserService {
     private static UserService instance;
-    private final UserStorage userStorage = JDBCUserStorage.getInstance();
+    private final UserStorage userStorage = JdbcUserStorage.getInstance();
 
     public static UserService getInstance(){
         if (instance == null){

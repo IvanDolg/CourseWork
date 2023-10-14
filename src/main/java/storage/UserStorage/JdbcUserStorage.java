@@ -6,19 +6,19 @@ import domain.User;
 import java.sql.*;
 import java.util.Optional;
 
-public class JDBCUserStorage implements UserStorage {
-    private static JDBCUserStorage instance;
+public class JdbcUserStorage implements UserStorage {
+    private static JdbcUserStorage instance;
     private final String SAVE_USER_DATA = "INSERT INTO \"human\" VALUES (DEFAULT, ?, ?, ?, ?);";
     private final String GET_USER_DATA_BY_USERNAME = "SELECT * FROM \"human\" WHERE userName = ?";
     private final String UPDATE_USER_DATA = "UPDATE \"human\" SET name = ?, username = ?, password = ?, role = ?\n" +
             "WHERE id = ?";
 
-    public JDBCUserStorage() {
+    public JdbcUserStorage() {
     }
 
-    public static JDBCUserStorage getInstance() {
+    public static JdbcUserStorage getInstance() {
         if (instance == null) {
-            instance = new JDBCUserStorage();
+            instance = new JdbcUserStorage();
         }
         return instance;
     }

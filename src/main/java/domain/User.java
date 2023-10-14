@@ -3,8 +3,12 @@ package domain;
 public class User {
     private int id;
     private String name;
+    private String surname;
     private String userName;
+    private String photo;
+    private String email;
     private String password;
+    private Country country;
     private String role;
 
     private static UserBuilder builder(){
@@ -23,53 +27,35 @@ public class User {
             return this;
         }
 
+        public UserBuilder setSurname(String surname) {
+            User.this.surname = surname;
+            return this;
+        }
+
         public  UserBuilder setUserName(String userName){
             User.this.userName = userName;
+            return this;
+        }
+        public UserBuilder setPhoto(String photo) {
+            User.this.photo = photo;
+            return this;
+        }
+        public UserBuilder setEmail(String email) {
+            User.this.email = email;
             return this;
         }
         public UserBuilder setPassword(String password){
             User.this.password = password;
             return this;
         }
+        public UserBuilder setCountry(Country country) {
+            User.this.country = country;
+            return this;
+        }
         public  UserBuilder setRole(String role){
             User.this.role = role;
             return this;
         }
-    }
-    /*public User(String name, String userName, String password) {
-        this.name = name;
-        this.userName = userName;
-        this.password = password;
-    }
-
-    public User(int id, String name, String userName, String password) {
-        this.id = id;
-        this.name = name;
-        this.userName = userName;
-        this.password = password;
-    }
-
-    public User( String name, String userName, String password, String role) {
-        this.name = name;
-        this.userName = userName;
-        this.password = password;
-        this.role = role;
-    }
-
-    public User(int id, String name, String userName, String password, String role) {
-        this.id = id;
-        this.name = name;
-        this.userName = userName;
-        this.password = password;
-        this.role = role;
-    }*/
-
-    public String getRole() {
-        return role;
-    }
-
-    public void setRole(String role) {
-        this.role = role;
     }
 
     public int getId() {
@@ -91,9 +77,32 @@ public class User {
     public String getUserName() {
         return userName;
     }
+    public String getSurname() {
+        return surname;
+    }
+
+    public void setSurname(String surname) {
+        this.surname = surname;
+    }
 
     public void setUserName(String userName) {
         this.userName = userName;
+    }
+
+    public String getPhoto() {
+        return photo;
+    }
+
+    public void setPhoto(String photo) {
+        this.photo = photo;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getPassword() {
@@ -104,12 +113,34 @@ public class User {
         this.password = password;
     }
 
+    public Country getCountry() {
+        return country;
+    }
+
+    public void setCountry(Country country) {
+        this.country = country;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
+
     @Override
     public String toString() {
         return "User{" +
-                "name='" + name + '\'' +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
                 ", userName='" + userName + '\'' +
+                ", photo='" + photo + '\'' +
+                ", email='" + email + '\'' +
                 ", password='" + password + '\'' +
+                ", country=" + country +
+                ", role='" + role + '\'' +
                 '}';
     }
 }

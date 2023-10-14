@@ -1,9 +1,7 @@
 package servlet;
 
-import config.JdbcConnection;
 import domain.User;
-import services.UserService;
-import storage.UserStorage.JDBCUserStorage;
+import storage.UserStorage.JdbcUserStorage;
 import storage.UserStorage.UserStorage;
 import utils.Validator;
 
@@ -13,13 +11,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
 
 @WebServlet("/settings")
 public class SettingsServlet extends HttpServlet {
-    private final UserStorage storage = JDBCUserStorage.getInstance();
+    private final UserStorage storage = JdbcUserStorage.getInstance();
     private final Validator validator = new Validator();
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
