@@ -17,24 +17,58 @@
 <jsp:include page="_header.jsp"/>
 <div class="container">
     <div class="row justify-content-center">
-        <form class="mt-5 w-25" action="/settings" method="post">
+        <form class="mt-5 w-25" action="/settings" method="post" enctype="multipart/form-data">
+
             <div class="form-floating mb-3">
-                <input type="text" name="name" class="form-control" id="1" placeholder="name@example.com">
-                <label for="1">Name</label>
+                <input type="text" name="name" class="form-control" id="name" placeholder="name@example.com">
+                <label for="name">First name</label>
             </div>
+
             <div class="form-floating mb-3">
-                <input type="text" name="username" class="form-control" id="2" placeholder="name3@example.com">
-                <label for="2">User name</label>
+                <input type="text" name="surname" class="form-control" id="surname" placeholder="name2@example.com">
+                <label for="surname">Second name</label>
             </div>
+
             <div class="form-floating mb-3">
-                <input type="password"  name="password" class="form-control" id="3" placeholder="Password">
-                <label for="3">Password</label>
+                <input type="email" name="email" class="form-control" id="email" placeholder="name4@example.com">
+                <label for="email">Email address</label>
             </div>
-            <select name="role" class="form-select" aria-label="Default select example">
-                <option value="USER">User</option>
-                <option value="ADMIN">Administrator</option>
+
+            <div class="mb-3">
+                <label for = "country" class="form-label"></label>
+                <select class="form-select" id = "country" name = "country" aria-label="Default select example">
+                    <option selected>Country</option>
+                    <c:forEach var="country" items="${countries}">
+                        <option value="${country.getId()}">${country.getName()}</option>
+                    </c:forEach>
+                </select>
+            </div>
+
+            <div class="mb-3" >
+                <label class="form-label" for="photo"></label>
+                <input type="file" name="photo" class="form-control" id="photo" >
+            </div>
+
+            <div class="form-floating mb-3">
+                <input type="text" name="userName" class="form-control" id="username" placeholder="name3@example.com">
+                <label for="username">User name</label>
+            </div>
+
+            <div class="form-floating mb-3">
+                <input type="password"  name="password" class="form-control" id="password" placeholder="Password">
+                <label for="password">Password</label>
+            </div>
+
+            <select name="role" class="form-select mb-3" aria-label="Default select example">
+                <option selected>Role</option>
+                <c:forEach var="role" items="${role}">
+                    <option value="${user.getId}">${user.getRole}</option>
+                </c:forEach>
             </select>
-            <button type="submit" class="btn btn-primary mt-5">Save changes</button>
+
+            <div class="d-grid gap-2 col-6 mx-auto">
+                <button class="btn btn-dark" type="submit">Save changes</button>
+            </div>
         </form>
     </div>
 </div>

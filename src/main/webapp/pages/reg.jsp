@@ -16,28 +16,28 @@
 <jsp:include page="_header.jsp"/>
 <div class="container">
   <div class="row justify-content-center">
-    <form class="mt-5 w-25" action="/reg" method="post">
+    <form class="mt-5 w-25" action="/reg" method="post" enctype="multipart/form-data">
 
-      <div class="col">
-        <label for="name" class="form-label">Name</label>
-        <input name="name" type="text" class="form-control" id="name">
+      <div class="form-floating mb-3">
+        <input type="text" name="name" class="form-control" id="name" placeholder="name@example.com">
+        <label for="name">First name</label>
+      </div>
+
+
+      <div class="form-floating mb-3">
+        <input type="text" name="surname" class="form-control" id="surname" placeholder="name2@example.com">
+        <label for="surname">Second name</label>
+      </div>
+
+      <div class="form-floating mb-3">
+        <input type="email" name="email" class="form-control" id="email" placeholder="name4@example.com">
+        <label for="email">Email address</label>
       </div>
 
       <div class="mb-3">
-        <div class="col">
-          <label for="surname" class="form-label">Surname</label>
-          <input name="surname" type="text" class="form-control" id="surname" required pattern="(^[A-Za-z]{3,16})">
-        </div>
-      </div>
-
-      <div class="mb-3">
-        <label for="email" class="form-label">Email address</label>
-        <input name="email" type="email" class="form-control" id="email" required pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$">
-      </div>
-
-      <div class="mb-3">
-        <label for="country" class="form-label">Country</label>
-        <select class="form-select" id="country" name="country">
+        <label for = "country" class="form-label"></label>
+        <select class="form-select" id = "country" name = "country" aria-label="Default select example">
+          <option selected>Country</option>
           <c:forEach var="country" items="${countries}">
             <option value="${country.getId()}">${country.getName()}</option>
           </c:forEach>
@@ -45,24 +45,25 @@
       </div>
 
       <div class="mb-3" >
-        <label class="form-label" for="photo">Photo</label>
-        <input type="file" class="form-control" id="photo" name="photo" >
+        <label class="form-label" for="photo"></label>
+        <input type="file" name="photo" class="form-control" id="photo" >
       </div>
 
-      <div class="mb-3">
-        <label for="username" class="form-label">Username</label>
-        <input type="text" name="userName" class="form-control" id="username" aria-describedby="emailHelp2">
-        <div id="emailHelp2" class="form-text">We'll never share your email with anyone else.</div>
+      <div class="form-floating mb-3">
+        <input type="text" name="userName" class="form-control" id="username" placeholder="name3@example.com">
+        <label for="username">User name</label>
       </div>
 
-      <div class="mb-3">
-        <label for="password" class="form-label">Password</label>
-        <input type="password" name="password" class="form-control" id="password">
+      <div class="form-floating mb-3">
+        <input type="password"  name="password" class="form-control" id="password" placeholder="Password">
+        <label for="password">Password</label>
       </div>
 
       <select name="role" class="form-select mb-3" aria-label="Default select example">
-        <option value="USER">User</option>
-        <option value="ADMIN">Administrator</option>
+        <option selected>Role</option>
+        <c:forEach var="role" items="${role}">
+          <option value="${user.getId}">${user.getRole}</option>
+        </c:forEach>
       </select>
 
       <div class="d-grid gap-2 col-6 mx-auto">

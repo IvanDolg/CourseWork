@@ -11,6 +11,7 @@
     <title>Title</title>
 </head>
 <body>
+<jsp:include page="_header.jsp"/>
 
 </body>
 </html>

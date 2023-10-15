@@ -17,18 +17,32 @@
   <div class="row justify-content-center">
     <form class="mt-5 w-25" action="/login" method="post">
 
-      <div class="mb-3">
-        <label for="exampleInputEmail2" class="form-label">Username</label>
-        <input type="text" name="userName" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp2">
-        <div id="emailHelp2" class="form-text">We'll never share your email with anyone else.</div>
+
+        <div class="form-floating mb-3">
+          <input type="text" name="userName" class="form-control" id="username" placeholder="name3@example.com">
+          <label for="username">User name</label>
+          <div id="username" class="form-text">We'll never share your email with anyone else.</div>
+
+        <c:if test="${usernameStatus != null}">
+          <div class="alert alert-danger" role="alert">
+              ${usernameStatus}
+          </div>
+        </c:if>
       </div>
 
-      <div class="mb-3">
-        <label for="exampleInputPassword1" class="form-label">Password</label>
-        <input type="password" name="password" class="form-control" id="exampleInputPassword1">
+      <div class="form-floating mb-3">
+        <input type="password"  name="password" class="form-control" id="password" placeholder="Password">
+        <label for="password">Password</label>
+        <c:if test="${passwordStatus != null}">
+          <div class="alert alert-danger" role="alert">
+              ${passwordStatus}
+          </div>
+        </c:if>
       </div>
 
-      <button type="submit" class="btn btn-primary">Submit</button>
+      <div class="d-grid gap-2 col-6 mx-auto">
+        <button class="btn btn-dark" type="submit">Sign In</button>
+      </div>
       <c:if test="${message != null}">
         <div class="alert alert-warning mt-5" role="alert">
             ${message}

@@ -4,6 +4,7 @@ import domain.User;
 import storage.UserStorage.JdbcUserStorage;
 import storage.UserStorage.UserStorage;
 
+import java.util.List;
 import java.util.Optional;
 
 public class UserService {
@@ -20,12 +21,17 @@ public class UserService {
     private UserService() {
     }
 
-    public void create(String name, String userName, String password, String role){
-        User user = new User();
-        userStorage.save(user);
+    public void add(User user) {
+        userStorage.add(user);
     }
 
-    public Optional<User> findByUsername (String userName){
-        return userStorage.getByUsername(userName);
+    public Optional<User> getUserById(int id) {
+        return userStorage.getById(id);
     }
+
+    public Optional<User> getUserByName(String username) {
+        return userStorage.getByUsername(username);
+    }
+
+    public void update(User user){userStorage.update(user);}
 }

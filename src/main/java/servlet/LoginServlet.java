@@ -23,32 +23,34 @@ public class LoginServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-       User user = new User();
-
         String userName = req.getParameter("userName");
         String password = req.getParameter("password");
 
-        user.setUserName(userName);
-        user.setPassword(password);
+       /* User user = User.builder()
+                .setUserName(userName)
+                .setPassword(password)
+                .build();
 
-        if (validation.validate(user)) {
-            Optional<User> byUserName = userService.findByUsername(userName);
+        *//*if (!validation.validate(user)){
+            req.setAttribute("invalid data", "Registration failed. Check the entered data!");
+        }*/
 
-            if (byUserName.isPresent()) {
-                user = byUserName.get();
+        Optional<User> userByName = userService.getUserByName(userName);
 
-                if (user.getPassword().equals(password)) {
-                    req.getSession().setAttribute("user", user);
-                    resp.sendRedirect("/");
-                } else {
-                    resp.sendError(400, "Wrong password!!!");
-                }
+        if (userByName.isPresent()){
+            User user = userByName.get();
+
+            if (user.getPassword().equals(password)){
+                req.getSession().setAttribute("user", user);
+
+                resp.sendRedirect("/pages/settings.jsp");
             } else {
-                resp.sendError(400, "User not found!!!");
+                req.setAttribute("passwordStatus", "Invalid password");
+                getServletContext().getRequestDispatcher("/pages/login.jsp").forward(req, resp);
             }
-        }
-        else {
-            resp.getWriter().println("Incorrect data ...");
+        } else {
+            req.setAttribute("usernameStatus", "Invalid Username");
+            getServletContext().getRequestDispatcher("/pages/login.jsp").forward(req, resp);
         }
     }
 }

@@ -11,7 +11,7 @@ import java.util.Optional;
 public class JdbcUserStorage implements UserStorage {
     private static JdbcUserStorage instance;
     private final String INSERT = "insert into \"human\" (name, surname, username, photo, email, password, role, country_id) values (?, ?, ?, ?, ?, ?, ?, ?)";
-    private final String GET_USER_DATA_BY_USERNAME = "select * from \"human\" join \"country\" on \"human\".country_id = \"country\".id where \"human\".id = ?";
+    private final String GET_BY_USERNAME_WITH_COUNTRY = "select * from human join country on human.country_id = country.id where username = ?";
     private final String GET_BY_ID_WITH_COUNTRY = "select * from \"human\" join \"country\" on \"human\".country_id = \"country\".id where \"human\".id = ?";
     private final String UPDATE_USER_DATA = "UPDATE human SET name = ?, surname = ?, username = ?, country_id = ?, photo = ?, email = ?, password = ?, role = ?\n" +
                                             "WHERE id = ?";
@@ -84,10 +84,10 @@ public class JdbcUserStorage implements UserStorage {
 
     @Override
     public Optional<User> getByUsername(String username) {
-        try (Connection connection = JdbcConnection.getConnection();
-             PreparedStatement preparedStatement = connection.prepareStatement(GET_USER_DATA_BY_USERNAME)) {
-
+        try (Connection connection = JdbcConnection.getConnection()) {
+            PreparedStatement preparedStatement = connection.prepareStatement(GET_BY_USERNAME_WITH_COUNTRY);
             preparedStatement.setString(1, username);
+
             ResultSet resultSet = preparedStatement.executeQuery();
 
             if (resultSet.next()) {
@@ -103,17 +103,18 @@ public class JdbcUserStorage implements UserStorage {
                 user.setRole(resultSet.getString(8));
 
                 Country country = new Country(
-                        resultSet.getInt(9),
-                        resultSet.getString(10)
+                        resultSet.getInt(10),
+                        resultSet.getString(11)
                 );
 
                 user.setCountry(country);
 
-                return Optional.of(new User());
+                return Optional.of(user);
             }
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
+
         return Optional.empty();
     }
 

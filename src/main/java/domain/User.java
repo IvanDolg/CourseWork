@@ -11,12 +11,13 @@ public class User {
     private Country country;
     private String role;
 
-    private static UserBuilder builder(){
+    public static UserBuilder builder() {
         return new User().new UserBuilder();
     }
 
     public class UserBuilder{
-        private UserBuilder(){}
+        private UserBuilder() {
+        }
         public UserBuilder setId(int id){
             User.this.id = id;
             return this;
@@ -55,6 +56,9 @@ public class User {
         public  UserBuilder setRole(String role){
             User.this.role = role;
             return this;
+        }
+        public User build() {
+            return User.this;
         }
     }
 
