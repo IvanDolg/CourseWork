@@ -52,7 +52,7 @@
       <p class="fs-6"></p>
 
       <p class="text-body-secondary">
-        Don`t have an account? <a href="/register">Sign up</a>
+        Don`t have an account? <a href="/register">Log in</a>
       </p>
     </form>
   </div>

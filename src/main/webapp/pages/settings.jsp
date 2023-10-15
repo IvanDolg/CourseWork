@@ -49,6 +49,7 @@
                 <input type="file" name="photo" class="form-control" id="photo" >
             </div>
 
+
             <div class="form-floating mb-3">
                 <input type="text" name="userName" class="form-control" id="username" placeholder="name3@example.com">
                 <label for="username">User name</label>
@@ -61,9 +62,8 @@
 
             <select name="role" class="form-select mb-3" aria-label="Default select example">
                 <option selected>Role</option>
-                <c:forEach var="role" items="${role}">
-                    <option value="${user.getId}">${user.getRole}</option>
-                </c:forEach>
+                <option value="ADMIN">Admin</option>
+                <option value="USER">User</option>
             </select>
 
             <div class="d-grid gap-2 col-6 mx-auto">

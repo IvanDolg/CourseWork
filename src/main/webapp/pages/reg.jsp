@@ -61,13 +61,13 @@
 
       <select name="role" class="form-select mb-3" aria-label="Default select example">
         <option selected>Role</option>
-        <c:forEach var="role" items="${role}">
-          <option value="${user.getId}">${user.getRole}</option>
-        </c:forEach>
+        <option value="ADMIN">Admin</option>
+        <option value="USER">User</option>
+
       </select>
 
       <div class="d-grid gap-2 col-6 mx-auto">
-        <button class="btn btn-dark" type="submit">Sign In</button>
+        <button class="btn btn-dark" type="submit">Sign Up</button>
       </div>
 
       <p class="fs-6"></p>

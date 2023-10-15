@@ -67,8 +67,8 @@ public class JdbcUserStorage implements UserStorage {
                 user.setRole(resultSet.getString(8));
 
                 Country country = new Country(
-                        resultSet.getInt(9),
-                        resultSet.getString(10)
+                        resultSet.getInt(10),
+                        resultSet.getString(11)
                 );
 
                 user.setCountry(country);
