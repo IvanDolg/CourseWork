@@ -10,12 +10,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="745b3e99-b523-4c2e-8743-0eb8bf99406e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/4f9c65fd-1405-4ae4-9806-d547d0c13e60.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/4f9c65fd-1405-4ae4-9806-d547d0c13e60.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/SettingsServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/SettingsServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/storage/UserStorage/JdbcUserStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/storage/UserStorage/JdbcUserStorage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/HelloSetvlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/HelloSetvlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/LogoutServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/LogoutServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/_header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/_header.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/home.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/login.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/reg.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/reg.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/settings.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/settings.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -193,7 +194,7 @@
       <workItem from="1696892700247" duration="3000" />
       <workItem from="1697316064474" duration="56000" />
       <workItem from="1697316144719" duration="16483000" />
-      <workItem from="1697377415122" duration="3226000" />
+      <workItem from="1697377415122" duration="11684000" />
     </task>
     <task id="LOCAL-00001" summary="feat: add settings">
       <created>1695680108063</created>
@@ -248,7 +249,15 @@
       <option name="project" value="LOCAL" />
       <updated>1697333681140</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="feat: update">
+      <option name="closed" value="true" />
+      <created>1697411788283</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1697411788283</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
