@@ -21,6 +21,7 @@
     <div class="container">
       <div class="row justify-content-center">
         <form class="mt-5 w-25" action="/" method="post">
+
           <div class="mb-3">
             <label for="exampleFormControlTextarea1" class="form-label">Enter SQL script</label>
             <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>

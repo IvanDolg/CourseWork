@@ -10,13 +10,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="745b3e99-b523-4c2e-8743-0eb8bf99406e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/servlet/LocalizationServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/servlet/ProfileServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/servlet/SearchServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/locale.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/profile.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/search.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/4f9c65fd-1405-4ae4-9806-d547d0c13e60/storage_v2/_src_/database/postgres.edMnLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/4f9c65fd-1405-4ae4-9806-d547d0c13e60/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/HelloSetvlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/HelloSetvlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/LogoutServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/LogoutServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/_header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/_header.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/home.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/reg.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/reg.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,9 +31,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Jsp File" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -71,6 +76,11 @@
     ]
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\vvvvv\AppData\Local\Temp\Temp3f1a262f-50a7-4222-b95c-284a126eb5ea_lesson-22-22-onl.zip\CourseWork\src\main\webapp\pages" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="Calc" />
@@ -194,7 +204,8 @@
       <workItem from="1696892700247" duration="3000" />
       <workItem from="1697316064474" duration="56000" />
       <workItem from="1697316144719" duration="16483000" />
-      <workItem from="1697377415122" duration="11684000" />
+      <workItem from="1697377415122" duration="11728000" />
+      <workItem from="1697450717709" duration="6384000" />
     </task>
     <task id="LOCAL-00001" summary="feat: add settings">
       <created>1695680108063</created>
@@ -257,7 +268,15 @@
       <option name="project" value="LOCAL" />
       <updated>1697411788283</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="feat: update">
+      <option name="closed" value="true" />
+      <created>1697420206492</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1697420206492</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
