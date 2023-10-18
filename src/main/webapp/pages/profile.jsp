@@ -1,4 +1,4 @@
-<%--
+<%@ page import="domain.User" %><%--
   Created by IntelliJ IDEA.
   User: vvvvv
   Date: 16.10.2023
@@ -18,62 +18,68 @@
 
 <div class="container">
     <div class="row justify-content-center">
+        <form class="mt-5 w-50" action="/profile" method="get" enctype="multipart/form-data">
 
-        <div class="row mb-3">
-            <label for="name" class="col-sm-2 col-form-label">Name</label>
-            <div class="col-sm-5">
-                <input type="text" class="form-control" id="name" placeholder="col-form-label">
+            <div class="row mb-3">
+                <div class="col-sm-5">
+                    <img src="data:image/jpg;base64,${user.getPhoto()}" width="200" height="200" alt="..."/>
+                </div>
             </div>
-        </div>
 
-        <div class="row mb-3">
-            <label for="surname" class="col-sm-2 col-form-label">Surname</label>
-            <div class="col-sm-5">
-                <input type="text" class="form-control" id="surname" placeholder="col-form-label">
+            <div class="row mb-3">
+                <label for="name" class="col-sm-2 col-form-label">Name</label>
+                <div class="col-sm-5">
+                    <div class="row" id="name">
+                        <h>${user.getName()}</h>
+                    </div>
+                </div>
             </div>
-        </div>
 
-        <div class="row mb-3">
-            <label for="username" class="col-sm-2 col-form-label">Username</label>
-            <div class="col-sm-5">
-                <input type="text" class="form-control" id="username" placeholder="col-form-label">
+            <div class="row mb-3">
+                <label for="surname" class="col-sm-2 col-form-label">Surname</label>
+                    <div class="col-sm-5">
+                        <div class="row" id="surname">
+                            <p>${user.getSurname()}</p>
+                        </div>
+                    </div>
             </div>
-        </div>
 
-        <div class="row mb-3">
-            <label for="photo" class="col-sm-2 col-form-label">Photo</label>
-            <div class="col-sm-5">
-                <input type="file" class="form-control" id="photo" placeholder="col-form-label">
+            <div class="row mb-3">
+                <label for="username" class="col-sm-2 col-form-label">Username</label>
+                <div class="col-sm-5">
+                    <div class="row" id="username">
+                        <p>${user.getUserName()}</p>
+                    </div>
+                </div>
             </div>
-        </div>
 
-        <div class="row mb-3">
-            <label for="email" class="col-sm-2 col-form-label">Email</label>
-            <div class="col-sm-5">
-                <input type="email" class="form-control" id="email" placeholder="col-form-label">
+            <div class="row mb-3">
+                <label for="email" class="col-sm-2 col-form-label">Email</label>
+                <div class="col-sm-5">
+                    <div class="row" id="email">
+                        <p>${user.getEmail()}</p>
+                    </div>
+                </div>
             </div>
-        </div>
 
-        <div class="row mb-3">
-            <label for="password" class="col-sm-2 col-form-label">Password</label>
-            <div class="col-sm-5">
-                <input type="password" class="form-control" id="password" placeholder="col-form-label">
+            <div class="row mb-3">
+                <label for="role" class="col-sm-2 col-form-label">Role</label>
+                <div class="col-sm-5">
+                    <div class="row" id="role">
+                        <p>${user.getRole()}</p>
+                    </div>
+                </div>
             </div>
-        </div>
 
-        <div class="row mb-3">
-            <label for="role" class="col-sm-2 col-form-label">Role</label>
-            <div class="col-sm-5">
-                <input type="text" class="form-control" id="role" placeholder="col-form-label">
+            <div class="row mb-3">
+                <label for="country" class="col-sm-2 col-form-label">Country</label>
+                <div class="col-sm-5">
+                    <div class="row" id="country">
+                        <p>${user.getCountry().getName()}</p>
+                    </div>
+                </div>
             </div>
-        </div>
-
-        <div class="row mb-3">
-            <label for="country" class="col-sm-2 col-form-label">Country</label>
-            <div class="col-sm-5">
-                <input type="text" class="form-control" id="country" placeholder="col-form-label">
-            </div>
-        </div>
+        </form>
     </div>
 </div>
 

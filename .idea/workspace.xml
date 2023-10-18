@@ -9,11 +9,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="745b3e99-b523-4c2e-8743-0eb8bf99406e" name="Changes" comment="feat: update">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/4f9c65fd-1405-4ae4-9806-d547d0c13e60.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/4f9c65fd-1405-4ae4-9806-d547d0c13e60.xml" afterDir="false" />
+    <list default="true" id="745b3e99-b523-4c2e-8743-0eb8bf99406e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/servlet/HistoryServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/HistoryServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/settings.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/settings.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/LoginServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/ProfileServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/ProfileServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/_header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/_header.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/profile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/profile.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,8 +27,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -62,32 +65,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "jdk.selected.JAVA_MODULE": "temurin-17",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "reference.settings.ide.settings.uml",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;temurin-17&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.uml&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ],
-    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
-      "PLAIN_TEXT"
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;PLAIN_TEXT&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\vvvvv\AppData\Local\Temp\Temp3f1a262f-50a7-4222-b95c-284a126eb5ea_lesson-22-22-onl.zip\CourseWork\src\main" />
@@ -220,7 +223,8 @@
       <workItem from="1697377415122" duration="11728000" />
       <workItem from="1697450717709" duration="7065000" />
       <workItem from="1697544903074" duration="12816000" />
-      <workItem from="1697636588406" duration="803000" />
+      <workItem from="1697636588406" duration="2312000" />
+      <workItem from="1697638926560" duration="3846000" />
     </task>
     <task id="LOCAL-00001" summary="feat: add settings">
       <created>1695680108063</created>
@@ -315,7 +319,15 @@
       <option name="project" value="LOCAL" />
       <updated>1697579663911</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="feat: update">
+      <option name="closed" value="true" />
+      <created>1697637413599</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1697637413599</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -334,9 +346,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat: add settings" />
-    <MESSAGE value="feat: update" />
     <MESSAGE value="feat: update git ignore file" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: update git ignore file" />
+    <MESSAGE value="feat: update" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: update" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -43,7 +43,7 @@ public class LoginServlet extends HttpServlet {
             if (user.getPassword().equals(password)){
                 req.getSession().setAttribute("user", user);
 
-                resp.sendRedirect("/pages/settings.jsp");
+                resp.sendRedirect("/pages/profile.jsp");
             } else {
                 req.setAttribute("passwordStatus", "Invalid password");
                 getServletContext().getRequestDispatcher("/pages/login.jsp").forward(req, resp);
