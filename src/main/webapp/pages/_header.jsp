@@ -48,6 +48,10 @@
                     <a class="nav-link" aria-current="page" href="/profile">Profile</a>
                 </li>
 
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="/localization">Localization</a>
+                </li>
+
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <c:if test="${user == 'ADMIN'}">
                         <li class="nav-item dropdown">
