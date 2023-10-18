@@ -49,7 +49,6 @@
                 <input type="file" name="photo" class="form-control" id="photo" >
             </div>
 
-
             <div class="form-floating mb-3">
                 <input type="text" name="userName" class="form-control" id="username" placeholder="name3@example.com">
                 <label for="username">User name</label>

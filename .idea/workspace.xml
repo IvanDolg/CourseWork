@@ -10,9 +10,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="745b3e99-b523-4c2e-8743-0eb8bf99406e" name="Changes" comment="feat: update">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/4f9c65fd-1405-4ae4-9806-d547d0c13e60.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/4f9c65fd-1405-4ae4-9806-d547d0c13e60.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/profile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/profile.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/HistoryServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/HistoryServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/settings.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/settings.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +32,20 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;IvanDolg&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="06cb4486-fedb-48c1-b1c6-52849d2a8b08" />
+        <option name="url" value="https://github.com/IvanDolg/CourseWork.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
     <option name="FILTER_WARNINGS" value="false" />
@@ -38,35 +53,41 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 1
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2VZesFKm0yXnXGRLdAmzObFFtY9" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.uml&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "jdk.selected.JAVA_MODULE": "temurin-17",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "reference.settings.ide.settings.uml",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
+    ],
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "PLAIN_TEXT"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\vvvvv\AppData\Local\Temp\Temp3f1a262f-50a7-4222-b95c-284a126eb5ea_lesson-22-22-onl.zip\CourseWork\src\main" />
@@ -198,7 +219,8 @@
       <workItem from="1697316144719" duration="16483000" />
       <workItem from="1697377415122" duration="11728000" />
       <workItem from="1697450717709" duration="7065000" />
-      <workItem from="1697544903074" duration="8689000" />
+      <workItem from="1697544903074" duration="12816000" />
+      <workItem from="1697636588406" duration="803000" />
     </task>
     <task id="LOCAL-00001" summary="feat: add settings">
       <created>1695680108063</created>
@@ -277,7 +299,23 @@
       <option name="project" value="LOCAL" />
       <updated>1697504993495</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="feat: update">
+      <option name="closed" value="true" />
+      <created>1697577939719</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1697577939719</updated>
+    </task>
+    <task id="LOCAL-00012" summary="feat: update git ignore file">
+      <option name="closed" value="true" />
+      <created>1697579663911</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1697579663911</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -297,7 +335,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat: add settings" />
     <MESSAGE value="feat: update" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: update" />
+    <MESSAGE value="feat: update git ignore file" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: update git ignore file" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
