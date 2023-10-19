@@ -1,6 +1,6 @@
 package servlet;
 
-import domain.User;
+import entity.User;
 import services.UserService;
 
 import javax.servlet.ServletException;

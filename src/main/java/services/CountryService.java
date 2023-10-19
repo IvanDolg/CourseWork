@@ -1,15 +1,15 @@
 package services;
 
-import domain.Country;
-import storage.CountryStorage.CountryStorage;
-import storage.CountryStorage.JdbcCountryStorage;
+import entity.Country;
+import dao.CountryDao.CountryDao;
+import dao.CountryDao.JdbcCountryDao;
 
 import java.util.List;
 import java.util.Optional;
 
 public class CountryService {
     private static CountryService instance;
-    private final CountryStorage storage = JdbcCountryStorage.getInstance();
+    private final CountryDao storage = JdbcCountryDao.getInstance();
 
     public static CountryService getInstance() {
         if (instance == null) {

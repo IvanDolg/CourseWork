@@ -1,14 +1,14 @@
 package services;
 
-import domain.City;
-import storage.CityStorage.CityStorage;
-import storage.CityStorage.JdbcCityStorage;
+import entity.City;
+import dao.CityDao.CityDao;
+import dao.CityDao.JdbcCityDao;
 
 import java.util.Optional;
 
 public class CityService {
     private static CityService instance;
-    private final CityStorage storage = JdbcCityStorage.getInstance();
+    private final CityDao storage = JdbcCityDao.getInstance();
 
     public static CityService getInstance(){
         if (instance == null){

@@ -1,7 +1,7 @@
 package servlet;
 
 import services.UserService;
-import domain.User;
+import entity.User;
 import utils.Validator;
 
 import javax.servlet.ServletException;

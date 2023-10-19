@@ -1,11 +1,9 @@
 package servlet;
 
-import domain.Country;
-import domain.User;
+import entity.Country;
+import entity.User;
 import services.CountryService;
 import services.UserService;
-import storage.UserStorage.JdbcUserStorage;
-import storage.UserStorage.UserStorage;
 import utils.Validator;
 
 import javax.servlet.ServletException;

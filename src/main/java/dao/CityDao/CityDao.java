@@ -1,10 +1,10 @@
-package storage.CityStorage;
+package dao.CityDao;
 
-import domain.City;
+import entity.City;
 
 import java.util.Optional;
 
-public interface CityStorage {
+public interface CityDao {
     Optional<City> getById(int id);
     Optional <City> getByName(String name);
 }

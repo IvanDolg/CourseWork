@@ -1,15 +1,14 @@
 package services;
 
-import domain.User;
-import storage.UserStorage.JdbcUserStorage;
-import storage.UserStorage.UserStorage;
+import entity.User;
+import dao.UserDao.JdbcUserDao;
+import dao.UserDao.UserDao;
 
-import java.util.List;
 import java.util.Optional;
 
 public class UserService {
     private static UserService instance;
-    private final UserStorage userStorage = JdbcUserStorage.getInstance();
+    private final UserDao userStorage = JdbcUserDao.getInstance();
 
     public static UserService getInstance(){
         if (instance == null){

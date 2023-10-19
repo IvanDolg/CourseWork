@@ -1,27 +1,27 @@
-package storage.UserStorage;
+package dao.UserDao;
 
 import config.JdbcConnection;
-import domain.Country;
-import domain.User;
+import entity.Country;
+import entity.User;
 
 import java.sql.*;
 import java.util.Base64;
 import java.util.Optional;
 
-public class JdbcUserStorage implements UserStorage {
-    private static JdbcUserStorage instance;
+public class JdbcUserDao implements UserDao {
+    private static JdbcUserDao instance;
     private final String INSERT = "insert into \"human\" (name, surname, username, photo, email, password, role, country_id) values (?, ?, ?, ?, ?, ?, ?, ?)";
     private final String GET_BY_USERNAME_WITH_COUNTRY = "select * from human join country on human.country_id = country.id where username = ?";
     private final String GET_BY_ID_WITH_COUNTRY = "select * from \"human\" join \"country\" on \"human\".country_id = \"country\".id where \"human\".id = ?";
     private final String UPDATE_USER_DATA = "UPDATE human SET name = ?, surname = ?, username = ?, country_id = ?, photo = ?, email = ?, password = ?, role = ?\n" +
                                             "WHERE id = ?";
 
-    public JdbcUserStorage() {
+    public JdbcUserDao() {
     }
 
-    public static JdbcUserStorage getInstance() {
+    public static JdbcUserDao getInstance() {
         if (instance == null) {
-            instance = new JdbcUserStorage();
+            instance = new JdbcUserDao();
         }
         return instance;
     }

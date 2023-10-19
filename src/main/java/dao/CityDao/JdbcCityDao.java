@@ -1,25 +1,25 @@
-package storage.CityStorage;
+package dao.CityDao;
 
 import config.JdbcConnection;
-import domain.City;
-import domain.Country;
+import entity.City;
+import entity.Country;
 
 import java.sql.*;
 import java.util.Optional;
 
-public class JdbcCityStorage implements CityStorage {
-    private static JdbcCityStorage instance;
+public class JdbcCityDao implements CityDao {
+    private static JdbcCityDao instance;
     private final String GET_BY_ID_SQL_SCRIPT = "SELECT * FROM \"сity\" JOIN \"сountry\"\n" +
             "on \"сountry\".id = \"сity\".country_id\n" +
             "WHERE \"сity\".id = ?";
     private final String GET_BY_NAME_SQL_SCRIPT = "SELECT * FROM \"сity\" JOIN \"сountry\"\n" +
             "on \"сountry\".id = \"сity\".country_id\n" +
             "WHERE \"сity\".name = ?;";
-    private JdbcCityStorage() {
+    private JdbcCityDao() {
     }
-    public static JdbcCityStorage getInstance(){
+    public static JdbcCityDao getInstance(){
         if (instance == null){
-            instance = new JdbcCityStorage();
+            instance = new JdbcCityDao();
         }
         return instance;
     }

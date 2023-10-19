@@ -1,10 +1,10 @@
-package storage.UserStorage;
+package dao.UserDao;
 
-import domain.User;
+import entity.User;
 
 import java.util.Optional;
 
-public interface UserStorage {
+public interface UserDao {
     void add (User user);
     Optional<User> getById(int id);
     Optional<User> getByUsername(String username);

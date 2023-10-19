@@ -1,7 +1,7 @@
 package servlet;
 
-import domain.Country;
-import domain.User;
+import entity.Country;
+import entity.User;
 import services.CountryService;
 import services.UserService;
 import utils.Validator;

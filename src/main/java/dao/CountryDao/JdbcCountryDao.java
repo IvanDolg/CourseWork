@@ -1,27 +1,27 @@
-package storage.CountryStorage;
+package dao.CountryDao;
 
 
 import config.JdbcConnection;
-import domain.Country;
+import entity.Country;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-public class JdbcCountryStorage implements CountryStorage{
+public class JdbcCountryDao implements CountryDao {
 
-    private static JdbcCountryStorage instance;
+    private static JdbcCountryDao instance;
 
     private final String GET_BY_ID = "select * from \"country\" where id = ?";
     private final String GET_BY_COUNTRY_NAME = "select * from \"country\" where name = ?";
     private final String GET_ALL = "select * from \"country\"";
 
-    private JdbcCountryStorage() {}
+    private JdbcCountryDao() {}
 
-    public static JdbcCountryStorage getInstance() {
+    public static JdbcCountryDao getInstance() {
         if (instance == null)
-            instance = new JdbcCountryStorage();
+            instance = new JdbcCountryDao();
 
         return instance;
     }

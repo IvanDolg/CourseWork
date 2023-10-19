@@ -1,6 +1,6 @@
 package utils;
 
-import domain.User;
+import entity.User;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
