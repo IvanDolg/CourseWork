@@ -10,29 +10,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="745b3e99-b523-4c2e-8743-0eb8bf99406e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/entity/City.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/filter/LocalizationFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/massage_en.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/massage_ru.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/City.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/Country.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Country.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/CityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/CityService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/CountryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/CountryService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/HelloSetvlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/HelloSetvlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/HistoryServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/HistoryServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/LoginServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/ProfileServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/ProfileServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/RegistrationServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/RegistrationServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/SettingsServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/SettingsServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/storage/CityStorage/CityStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/CityDao/CityStorage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/storage/CityStorage/JdbcCityStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/CityDao/JdbcCityStorage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/storage/CountryStorage/CountryStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/CountryDao/CountryStorage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/storage/CountryStorage/JdbcCountryStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/CountryDao/JdbcCountryStorage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/storage/UserStorage/JdbcUserStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/UserDao/JdbcUserStorage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/storage/UserStorage/UserStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/UserDao/UserStorage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/Validator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/Validator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/profile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/profile.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/LocalizationServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/LocalizationServlet.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -241,7 +223,7 @@
       <workItem from="1697544903074" duration="12816000" />
       <workItem from="1697636588406" duration="2312000" />
       <workItem from="1697638926560" duration="5021000" />
-      <workItem from="1697755699539" duration="299000" />
+      <workItem from="1697755699539" duration="1813000" />
     </task>
     <task id="LOCAL-00001" summary="feat: add settings">
       <created>1695680108063</created>
@@ -360,7 +342,23 @@
       <option name="project" value="LOCAL" />
       <updated>1697643331646</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="feat: update">
+      <option name="closed" value="true" />
+      <created>1697756194411</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1697756194411</updated>
+    </task>
+    <task id="LOCAL-00017" summary="feat: update reg">
+      <option name="closed" value="true" />
+      <created>1697756521385</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1697756521385</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -381,7 +379,8 @@
     <MESSAGE value="feat: add settings" />
     <MESSAGE value="feat: update git ignore file" />
     <MESSAGE value="feat: update" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: update" />
+    <MESSAGE value="feat: update reg" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: update reg" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
