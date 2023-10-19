@@ -24,7 +24,7 @@
 
 
         <div class="form-floating mb-3">
-          <input type="text" name="userName" class="form-control" id="username" placeholder="name3@example.com">
+          <input type="text" name="userName" class="form-control" id="username" placeholder="name3@example.com" required pattern="\w*">
           <label for="username">User name</label>
           <div id="username" class="form-text">We'll never share your email with anyone else.</div>
 
@@ -36,7 +36,7 @@
       </div>
 
       <div class="form-floating mb-3">
-        <input type="password"  name="password" class="form-control" id="password" placeholder="Password">
+        <input type="password"  name="password" class="form-control" id="password" placeholder="Password" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$">
         <label for="password">Password</label>
         <c:if test="${passwordStatus != null}">
           <div class="alert alert-danger" role="alert">

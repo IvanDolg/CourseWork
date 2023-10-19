@@ -22,18 +22,18 @@
     <form class="mt-5 w-25" action="/reg" method="post" enctype="multipart/form-data">
 
       <div class="form-floating mb-3">
-        <input type="text" name="name" class="form-control" id="name" placeholder="name@example.com">
+        <input type="text" name="name" class="form-control" id="name" placeholder="name@example.com" required pattern="(^[A-Za-z]{3,16})">
         <label for="name">First name</label>
       </div>
 
 
       <div class="form-floating mb-3">
-        <input type="text" name="surname" class="form-control" id="surname" placeholder="name2@example.com">
+        <input type="text" name="surname" class="form-control" id="surname" placeholder="name2@example.com" required pattern="(^[A-Za-z]{3,16})">
         <label for="surname">Second name</label>
       </div>
 
       <div class="form-floating mb-3">
-        <input type="email" name="email" class="form-control" id="email" placeholder="name4@example.com">
+        <input type="email" name="email" class="form-control" id="email" placeholder="name4@example.com" required pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$">
         <label for="email">Email address</label>
       </div>
 
@@ -53,12 +53,12 @@
       </div>
 
       <div class="form-floating mb-3">
-        <input type="text" name="userName" class="form-control" id="username" placeholder="name3@example.com">
+        <input type="text" name="userName" class="form-control" id="username" placeholder="name3@example.com" required pattern="\w*">
         <label for="username">User name</label>
       </div>
 
       <div class="form-floating mb-3">
-        <input type="password"  name="password" class="form-control" id="password" placeholder="Password">
+        <input type="password"  name="password" class="form-control" id="password" placeholder="Password" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$">
         <label for="password">Password</label>
       </div>
 
