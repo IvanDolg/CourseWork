@@ -8,11 +8,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebFilter(servletNames = "CalculatorServlet")
+@WebFilter(urlPatterns = {"/logout", "/settings", "/profile"})
 public class SecurityFilter extends HttpFilter {
     @Override
     protected void doFilter(HttpServletRequest req, HttpServletResponse res, FilterChain chain) throws IOException, ServletException {
-        if (req.getSession().getAttribute("currentUser") != null) {
+        if (req.getSession().getAttribute("user") != null) {
             chain.doFilter(req,res);
         } else {
             res.sendError(401) ;

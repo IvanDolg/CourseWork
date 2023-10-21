@@ -57,7 +57,7 @@
       <p class="fs-6"></p>
 
       <p class="text-body-secondary">
-        Don`t have an account? <a href="/register">Sing Up</a>
+        Don`t have an account? <a href="/reg">Sing Up</a>
       </p>
     </form>
   </div>

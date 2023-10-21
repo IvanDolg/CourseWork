@@ -26,48 +26,45 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link"  aria-current="page" href="/reg">Sign Up</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link"  aria-current="page" href="/login">Log In</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="/">SQL compiler</a>
-                </li>
+                <c:if test="${user == null}">
+                    <li class="nav-item">
+                        <a class="nav-link"  aria-current="page" href="/reg">Sign Up</a>
+                    </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="/logout">Logout</a>
-                </li>
+                    <li class="nav-item">
+                        <a class="nav-link"  aria-current="page" href="/login">Log In</a>
+                    </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="/settings">Settings</a>
-                </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="/">SQL compiler</a>
+                    </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="/profile">Profile</a>
-                </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="/localization">Localization</a>
+                    </li>
+                </c:if>
 
-                <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="/localization">Localization</a>
-                </li>
+                <c:if test="${user != null}">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="/logout">Logout</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="/settings">Settings</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="/profile">Profile</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="/localization">Localization</a>
+                    </li>
+                </c:if>
 
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <c:if test="${user == 'ADMIN'}">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                               aria-expanded="false">
-                                Admin Panel
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="/">Action</a></li>
-                                <li><a class="dropdown-item" href="login.jsp">Another action</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
-                        </li>
+                        // написать, реализацию для Админа)
                     </c:if>
                 </ul>
             </ul>

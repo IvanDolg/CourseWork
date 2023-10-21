@@ -18,64 +18,64 @@
 
 <div class="container">
     <div class="row justify-content-center">
-        <form class="mt-5 w-50" action="/profile" method="get" enctype="multipart/form-data">
+        <form class="mt-5 w-25" action="/profile" method="get" enctype="multipart/form-data">
 
             <div class="row mb-3">
-                <div class="col-sm-5">
+                <div class="col-sm-6">
                     <img src="data:image/jpg;base64,${user.getPhoto()}" width="200" height="200" alt="..."/>
                 </div>
             </div>
 
             <div class="row mb-3">
-                <label for="name" class="col-sm-2 col-form-label">Name</label>
+                <label for="name" class="col-sm-6"><b><h3>Name</h3></b></label>
                 <div class="col-sm-5">
                     <div class="row" id="name">
-                        <h>${user.getName()}</h>
+                        <b><h3>${user.getName()}</h3></b>
                     </div>
                 </div>
             </div>
 
             <div class="row mb-3">
-                <label for="surname" class="col-sm-2 col-form-label">Surname</label>
+                <label for="surname" class="col-sm-6"><b><h3>Surname</h3></b></label>
                     <div class="col-sm-5">
                         <div class="row" id="surname">
-                            <p>${user.getSurname()}</p>
+                            <b><h3>${user.getSurname()}</h3></b>
                         </div>
                     </div>
             </div>
 
             <div class="row mb-3">
-                <label for="username" class="col-sm-2 col-form-label">Username</label>
+                <label for="username" class="col-sm-6"><b><h3>Username</h3></b></label>
                 <div class="col-sm-5">
                     <div class="row" id="username">
-                        <p>${user.getUserName()}</p>
+                        <b><h3>${user.getUserName()}</h3></b>
                     </div>
                 </div>
             </div>
 
             <div class="row mb-3">
-                <label for="email" class="col-sm-2 col-form-label">Email</label>
+                <label for="email" class="col-sm-6"><b><h3>Email</h3></b></label>
                 <div class="col-sm-5">
                     <div class="row" id="email">
-                        <p>${user.getEmail()}</p>
+                        <b><h3>${user.getEmail()}</h3></b>
                     </div>
                 </div>
             </div>
 
             <div class="row mb-3">
-                <label for="role" class="col-sm-2 col-form-label">Role</label>
+                <label for="role" class="col-sm-6"><b><h3>Role</h3></b></label>
                 <div class="col-sm-5">
                     <div class="row" id="role">
-                        <p>${user.getRole()}</p>
+                        <b><h3>${user.getRole()}</h3></b>
                     </div>
                 </div>
             </div>
 
             <div class="row mb-3">
-                <label for="country" class="col-sm-2 col-form-label">Country</label>
+                <label for="country" class="col-sm-6"><b><h3>Country</h3></b></label>
                 <div class="col-sm-5">
                     <div class="row" id="country">
-                        <p>${user.getCountry().getName()}</p>
+                        <b><h3>${user.getCountry().getName()}</h3></b>
                     </div>
                 </div>
             </div>
