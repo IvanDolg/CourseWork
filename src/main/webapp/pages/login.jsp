@@ -1,5 +1,4 @@
-<%--
-  Created by IntelliJ IDEA.
+Created by IntelliJ IDEA.
   User: vvvvv
   Date: 22.09.2023
   Time: 16:07
@@ -7,6 +6,18 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page import="java.util.Properties" %>
+
+
+<%
+  Properties properties = (Properties) request.getAttribute("properties");
+  String username = properties.getProperty("login.username");
+  String password = properties.getProperty("login.password");
+  String button = properties.getProperty("login.button");
+  String button2 = properties.getProperty("login.button2");
+  String description = properties.getProperty("login.description");
+%>
+
 <html>
 <head>
 
@@ -25,7 +36,7 @@
 
         <div class="form-floating mb-3">
           <input type="text" name="userName" class="form-control" id="username" placeholder="name3@example.com" required pattern="\w*">
-          <label for="username">User name</label>
+          <label for="username"><%=username%></label>
           <div id="username" class="form-text">We'll never share your email with anyone else.</div>
 
         <c:if test="${usernameStatus != null}">
@@ -37,7 +48,7 @@
 
       <div class="form-floating mb-3">
         <input type="password"  name="password" class="form-control" id="password" placeholder="Password" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$">
-        <label for="password">Password</label>
+        <label for="password"><%=password%></label>
         <c:if test="${passwordStatus != null}">
           <div class="alert alert-danger" role="alert">
               ${passwordStatus}
@@ -46,7 +57,7 @@
       </div>
 
       <div class="d-grid gap-2 col-6 mx-auto">
-        <button class="btn btn-dark" type="submit">Sign In</button>
+        <button class="btn btn-dark" type="submit"><%=button2%></button>
       </div>
       <c:if test="${message != null}">
         <div class="alert alert-warning mt-5" role="alert">
@@ -57,7 +68,7 @@
       <p class="fs-6"></p>
 
       <p class="text-body-secondary">
-        Don`t have an account? <a href="/reg">Sing Up</a>
+        <%=description%> <a href="/reg"><%=button%></a>
       </p>
     </form>
   </div>

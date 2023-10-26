@@ -9,6 +9,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.Reader;
+import java.nio.charset.StandardCharsets;
 import java.util.Locale;
 import java.util.Properties;
 
@@ -38,21 +41,22 @@ public class LocalizationFilter extends HttpFilter {
         String language = locale.getLanguage();
 
         Properties properties = new Properties();
-        InputStream filePath;
+        InputStream  filePath;
 
         if ("ru".equals(language)) {
-            filePath = getClass().getClassLoader().getResourceAsStream("massage_rus.properties");
+            filePath = getClass().getClassLoader().getResourceAsStream("massage_ru.properties");
         } else {
             filePath = getClass().getClassLoader().getResourceAsStream("massage_en.properties");
         }
 
-        try {
-            properties.load(filePath);
+        try (Reader reader = new InputStreamReader(filePath, StandardCharsets.UTF_8)) {
+            properties.load(reader);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
 
         req.setAttribute("properties", properties);
+
         chain.doFilter(req, res);
     }
 }
