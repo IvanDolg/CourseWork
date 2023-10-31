@@ -2,9 +2,11 @@ package entity;
 
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 @Getter
 @Setter
+@ToString
 public class User {
     private int id;
     private String name;
@@ -65,19 +67,5 @@ public class User {
         public User build() {
             return User.this;
         }
-    }
-    @Override
-    public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", surname='" + surname + '\'' +
-                ", userName='" + userName + '\'' +
-                ", photo='" + photo + '\'' +
-                ", email='" + email + '\'' +
-                ", password='" + password + '\'' +
-                ", country=" + country +
-                ", role='" + role + '\'' +
-                '}';
     }
 }
