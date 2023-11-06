@@ -16,6 +16,7 @@ Created by IntelliJ IDEA.
   String button = properties.getProperty("login.button");
   String button2 = properties.getProperty("login.button2");
   String description = properties.getProperty("login.description");
+  String text = properties.getProperty("login.text");
 %>
 
 <html>

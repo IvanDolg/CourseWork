@@ -13,7 +13,6 @@
 
   <%
     Properties properties = (Properties) request.getAttribute("properties");
-
     String name = properties.getProperty("registration.name");
     String surname = properties.getProperty("registration.surname");
     String email = properties.getProperty("registration.email");

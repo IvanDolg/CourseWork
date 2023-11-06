@@ -1,3 +1,5 @@
+SET search_path TO public;
+
 insert into country values (1, 'Беларусь');
 insert into country values (2, 'США');
 
@@ -15,5 +17,3 @@ insert into human values (1, 'Ilya', 'Moiseenko', 'IlyaMoiseenko', null, 'IlyaMo
 insert into human values (2, 'Marina', 'Maslowa', 'MarinaMaslowa', null, 'MarinaMaslowa@gmail.com', 'testPassword', 'ADMIN', 1);
 insert into human values (3, 'Kolya', 'Pinchuk', 'KolyaPinchuk', null, 'KolyaPinchuk@gmail.com', 'testPassword', 'ADMIN', 1);
 insert into human values (4, 'Karina', 'Mashanova', 'KarinaMashanova', null, 'KarinaMashanova@gmail.com', 'testPassword', 'ADMIN', 1);
-
-
