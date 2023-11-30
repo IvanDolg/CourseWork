@@ -11,18 +11,11 @@
   <component name="ChangeListManager">
     <list default="true" id="98be2790-27bb-4a94-83cd-595220cdf43b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scriots/insertTestData.sql" beforeDir="false" afterPath="$PROJECT_DIR$/scriots/insertTestData.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/config/JdbcConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/config/JdbcConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/City.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/City.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/entity/Country.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Country.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/filter/LocalizationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/filter/LocalizationFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/massage_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/massage_en.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/massage_ru.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/massage_ru.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/_header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/_header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/home.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/locale.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/locale.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/profile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/profile.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/reg.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/reg.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/settings.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/settings.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/RegistrationServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/RegistrationServlet.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +48,7 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "/home/ivand/Документы/Corse Java lessons/lesson-48-22-onl",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -185,6 +179,11 @@
       <workItem from="1699283460561" duration="23000" />
       <workItem from="1699283503149" duration="12000" />
       <workItem from="1699283835541" duration="6567000" />
+      <workItem from="1699882284642" duration="96000" />
+      <workItem from="1699882414480" duration="1290000" />
+      <workItem from="1699918852470" duration="15000" />
+      <workItem from="1700064649110" duration="2000" />
+      <workItem from="1701379274734" duration="4038000" />
     </task>
     <servers />
   </component>

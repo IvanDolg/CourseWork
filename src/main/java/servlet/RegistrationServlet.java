@@ -55,14 +55,14 @@ public class RegistrationServlet extends HttpServlet {
         Country country = countryService.getById(Integer.parseInt(req.getParameter(COUNTRY))).orElse(new Country());
 
         User user = User.builder()
-                .setName(name)
-                .setSurname(surname)
-                .setUserName(username)
-                .setEmail(email)
-                .setPassword(password)
-                .setCountry(country)
-                .setRole(role)
-                .setPhoto(Base64.getEncoder().encodeToString(photoInputStream.readAllBytes()))
+                .name(name)
+                .surname(surname)
+                .userName(username)
+                .email(email)
+                .password(password)
+                .country(country)
+                .role(role)
+                .photo(Base64.getEncoder().encodeToString(photoInputStream.readAllBytes()))
                 .build();
 
         Optional<User> byUsername = userService.getUserByName(username);
