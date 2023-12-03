@@ -24,3 +24,11 @@ create table if not exists "city" (
                                       country_id int,
                                       foreign key (country_id) references "country"(id)
     );
+
+create table if not exists "exercise" (
+                                    id serial not null primary key,
+                                    name varchar(50) not null unique,
+                                    discription varchar not null,
+                                    rightCode varchar not null,
+                                    scores int
+    );
