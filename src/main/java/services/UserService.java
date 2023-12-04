@@ -32,5 +32,7 @@ public class UserService {
         return userStorage.getByUsername(username);
     }
 
+    public Optional<User> getUserByEmail(String email){return userStorage.getUserByEmail(email);}
+
     public void update(User user){userStorage.update(user);}
 }

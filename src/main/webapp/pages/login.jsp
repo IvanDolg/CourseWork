@@ -70,6 +70,9 @@ Created by IntelliJ IDEA.
       <p class="text-body-secondary">
         <%=description%> <a href="/reg"><%=button%></a>
       </p>
+      <p class="text-body-secondary">
+        Forget password ?<a href="/sendEmail"> Password Recovery</a>
+      </p>
     </form>
   </div>
 </div>

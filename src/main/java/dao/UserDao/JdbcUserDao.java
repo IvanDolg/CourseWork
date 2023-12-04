@@ -13,6 +13,7 @@ public class JdbcUserDao implements UserDao {
     private final String INSERT = "insert into \"human\" (name, surname, username, photo, email, password, role, country_id) values (?, ?, ?, ?, ?, ?, ?, ?)";
     private final String GET_BY_USERNAME_WITH_COUNTRY = "select * from human join country on human.country_id = country.id where username = ?";
     private final String GET_BY_ID_WITH_COUNTRY = "select * from \"human\" join \"country\" on \"human\".country_id = \"country\".id where \"human\".id = ?";
+    private final String GET_BY_EAIL = "select * from \"human\" where \"human\".email = ?";
     private final String UPDATE_USER_DATA = "UPDATE human SET name = ?, surname = ?, username = ?, country_id = ?, photo = ?, email = ?, password = ?, role = ?\n" +
                                             "WHERE id = ?";
 
@@ -115,6 +116,32 @@ public class JdbcUserDao implements UserDao {
             e.printStackTrace();
         }
 
+        return Optional.empty();
+    }
+
+    @Override
+    public Optional<User> getUserByEmail(String email) {
+        try (Connection connection = JdbcConnection.getConnection()){
+            PreparedStatement preparedStatement = connection.prepareStatement(GET_BY_EAIL);
+
+            preparedStatement.setString(1, email);
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+
+            if (resultSet.next()) {
+                User user = new User();
+
+                user.setName(resultSet.getString(2));
+                user.setSurname(resultSet.getString(3));
+                user.setUserName(resultSet.getString(4));
+                user.setEmail(resultSet.getString(6));
+                user.setPassword(resultSet.getString(7));
+
+                return Optional.of(user);
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
         return Optional.empty();
     }
 

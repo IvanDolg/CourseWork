@@ -10,15 +10,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="98be2790-27bb-4a94-83cd-595220cdf43b" name="Changes" comment="fix bag">
-      <change afterPath="$PROJECT_DIR$/src/main/java/servlet/RightCodeServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/rightCode.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/servlet/PasswordRecoveryServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/passwordRecovery.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/ExercisesDao/ExerciseDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/ExercisesDao/ExerciseDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/ExercisesDao/JdbcExerciseDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/ExercisesDao/JdbcExerciseDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/filter/LocalizationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/filter/LocalizationFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/ExercisesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/ExercisesService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/HomeSetvlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/HomeSetvlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/home.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/UserDao/JdbcUserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/UserDao/JdbcUserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/UserDao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/UserDao/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/login.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -196,7 +195,8 @@
       <workItem from="1700064649110" duration="2000" />
       <workItem from="1701379274734" duration="4332000" />
       <workItem from="1701384047508" duration="1027000" />
-      <workItem from="1701635932585" duration="16734000" />
+      <workItem from="1701635932585" duration="17591000" />
+      <workItem from="1701693561221" duration="5621000" />
     </task>
     <task id="LOCAL-00001" summary="fix bag">
       <option name="closed" value="true" />
@@ -214,7 +214,23 @@
       <option name="project" value="LOCAL" />
       <updated>1701383966392</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="fix bag">
+      <option name="closed" value="true" />
+      <created>1701654516119</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1701654516119</updated>
+    </task>
+    <task id="LOCAL-00004" summary="fix bag">
+      <option name="closed" value="true" />
+      <created>1701688791445</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1701688791445</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
