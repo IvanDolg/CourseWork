@@ -16,6 +16,7 @@
     <title>Home</title>
 </head>
 <body>
+<jsp:include page="_header.jsp"/>
 <form action="/" method="post">
     <div class="container-fluid">
         <div class="row">
