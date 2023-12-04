@@ -1,14 +1,12 @@
 package dao.ExercisesDao;
 
 import config.JdbcConnection;
-import dao.UserDao.JdbcUserDao;
 import entity.Exercises;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.Optional;
 
 public class JdbcExerciseDao implements ExerciseDao{
     private static JdbcExerciseDao instance;
@@ -25,7 +23,7 @@ public class JdbcExerciseDao implements ExerciseDao{
         return instance;
     }
     @Override
-    public Optional<Exercises> getById(int id) {
+    public Exercises getById(int id) {
         try (Connection connection = JdbcConnection.getConnection()) {
             PreparedStatement preparedStatement = connection.prepareStatement(GET_BY_ID_WITH_COUNTRY);
             preparedStatement.setInt(1, id);
@@ -41,11 +39,11 @@ public class JdbcExerciseDao implements ExerciseDao{
                 exercises.setRightCode(resultSet.getString(4));
                 exercises.setScores(resultSet.getInt(5));
 
-                return Optional.of(new Exercises());
+                return exercises;
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-        return Optional.empty();
+        return new Exercises();
     }
 }

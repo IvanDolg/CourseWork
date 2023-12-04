@@ -8,31 +8,81 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.beans.Statement;
 import java.io.IOException;
-import java.util.Optional;
+
 @WebServlet(urlPatterns = "/")
 public class HomeSetvlet extends HttpServlet {
     private final ExercisesService exercisesService = ExercisesService.getInstance();
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        String exerciseId = req.getParameter("exerciseId");
+
+        if (exerciseId == null){
+            Exercises optionalExercise = exercisesService.getUserById(1);
+
+            String description = optionalExercise.getDescription();
+            req.setAttribute("description", description);
+
+            int number = optionalExercise.getId();
+            req.setAttribute("number", number);
+
+            int score = optionalExercise.getScores();
+            req.setAttribute("score", score);
+        }
+
+        if (exerciseId != null) {
+            int id = Integer.parseInt(exerciseId);
+            Exercises optionalExercise = exercisesService.getUserById(id);
+
+                String description = optionalExercise.getDescription();
+                req.setAttribute("description", description);
+
+                int number = optionalExercise.getId();
+                req.setAttribute("number", number);
+
+                int score = optionalExercise.getScores();
+                req.setAttribute("score", score);
+
+        }
         getServletContext().getRequestDispatcher("/pages/home.jsp").forward(req, resp);
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        String sqlScript = req.getParameter("sqlScript");
+        String cleanScriptWithYourCode = sqlScript.replaceAll("\\s", "");
+
         String exerciseId = req.getParameter("exerciseId");
+
+        if (exerciseId == null){
+            Exercises optionalExercise = exercisesService.getUserById(1);
+
+            String rightCode = optionalExercise.getRightCode();
+            String cleanScriptWithRightCode = rightCode.replaceAll("\\s", "");
+
+            if (cleanScriptWithRightCode.equalsIgnoreCase(cleanScriptWithYourCode)){
+                req.setAttribute("rightCode", rightCode);
+            } else if (!sqlScript.isEmpty()){
+                req.setAttribute("wrongCode", sqlScript);
+            }
+        }
 
         if (exerciseId != null) {
             int id = Integer.parseInt(exerciseId);
-            Optional<Exercises> optionalExercise = exercisesService.getUserById(id);
+            Exercises optionalExercise = exercisesService.getUserById(id);
 
-            if (optionalExercise.isPresent()) {
-                Exercises exercise = optionalExercise.get();
+            String rightCode = optionalExercise.getRightCode();
+            String cleanScriptWithRightCode = rightCode.replaceAll("\\s", "");
 
-                String description = exercise.getDescription();
-                req.setAttribute("description", description);
-                resp.sendRedirect("/pages/home.jsp");
+            if (cleanScriptWithRightCode.equalsIgnoreCase(cleanScriptWithYourCode) && !sqlScript.isEmpty()){
+                req.setAttribute("rightCode", rightCode);
+            } else  if (!sqlScript.isEmpty()){
+                req.setAttribute("wrongCode", sqlScript);
             }
         }
+
+        doGet(req, resp);
+        getServletContext().getRequestDispatcher("/pages/home.jsp").forward(req, resp);
     }
 }

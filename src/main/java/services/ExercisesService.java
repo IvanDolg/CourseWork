@@ -4,8 +4,6 @@ import dao.ExercisesDao.ExerciseDao;
 import dao.ExercisesDao.JdbcExerciseDao;
 import entity.Exercises;
 
-import java.util.Optional;
-
 public class ExercisesService {
     private static ExercisesService instance;
     private final ExerciseDao exerciseDao = JdbcExerciseDao.getInstance();
@@ -16,7 +14,7 @@ public class ExercisesService {
         }
         return instance;
     }
-    public Optional<Exercises> getUserById(int id) {
+    public Exercises getUserById(int id) {
         return exerciseDao.getById(id);
 
     }
