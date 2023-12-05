@@ -32,7 +32,7 @@
 
 <nav class="navbar navbar-expand-lg bg-dark justify-content-center sticky-top" data-bs-theme="dark">
     <div class="container-fluid">
-        <a class="navbar-brand fst-italic fw-bolder fs-4" href="/"><%=brand%></a>
+        <a class="navbar-brand fst-italic fw-bolder fs-4"><%=brand%></a>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -52,10 +52,6 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="/"><%=home%></a>
-                    </li>
-
-                    <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="/localization"><%=language%></a>
                     </li>
                 </c:if>
@@ -71,6 +67,10 @@
 
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="/profile"><%=profile%></a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="/"><%=home%></a>
                     </li>
 
                     <li class="nav-item">
