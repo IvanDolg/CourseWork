@@ -3,8 +3,7 @@ package servlet;
 import entity.User;
 import services.UserService;
 
-import javax.mail.Message;
-import javax.mail.Session;
+import javax.mail.*;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 import javax.servlet.ServletException;
@@ -13,14 +12,17 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.net.Authenticator;
-import java.net.PasswordAuthentication;
 import java.util.Optional;
 import java.util.Properties;
 
 @WebServlet("/sendEmail")
 public class PasswordRecoveryServlet extends HttpServlet {
     private final UserService userService = UserService.getInstance();
+    private String userName;
+    private String name;
+    private String surname;
+    private String email;
+    private String password;
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         getServletContext().getRequestDispatcher("/pages/passwordRecovery.jsp").forward(req, resp);
@@ -28,60 +30,52 @@ public class PasswordRecoveryServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String emailAddress = req.getParameter("emailAddress");
+/*        String emailAddress = req.getParameter("email");
+
 
         Optional<User> getUser = userService.getUserByEmail(emailAddress);
 
         if (getUser.isPresent()){
             User user = getUser.get();
+
             if (user.getEmail().equals(emailAddress)){
-                req.getSession().setAttribute("user", user);
+               name = user.getName();
+               surname = user.getSurname();
+               userName = user.getUserName();
+               email = user.getEmail();
+               password = user.getPassword();
+               req.getSession().setAttribute("user", user);
+           } else  getServletContext().getRequestDispatcher("/pages/passwordRecovery.jsp").forward(req, resp);
+       }*/
 
-                resp.sendRedirect("/pages/profile.jsp");
-            }
-        }
+        Properties properties = new Properties();
 
-        String recipientEmail = req.getParameter("recipientEmail"); // Адрес получателя
-        String subject = req.getParameter("subject"); // Тема письма
-        String message = req.getParameter("message"); // Сообщение
+        properties.put("mail.smtp.host", "smtp.gmail.com");
+        properties.put("mail.smtp.port", 465);
+        properties.put("mail.smtp.ssl.enable", "true");
+        properties.put("mail.smtp.auth", "true");
 
-        // Конфигурация JavaMail API
-        String host = "smtp.example.com"; // SMTP-сервер для отправки писем
-        String username = "your_username"; // Ваше имя пользователя для авторизации на SMTP-сервере
-        String password = "your_password"; // Ваш пароль для авторизации на SMTP-сервере
 
-        // Настройка свойств для подключения к SMTP-серверу
-        Properties props = new Properties();
-        props.put("mail.smtp.auth", "true");
-        props.put("mail.smtp.starttls.enable", "true");
-        props.put("mail.smtp.host", host);
-        props.put("mail.smtp.port", "587");
-
-        /*// Создание сессии
-        Session session = Session.getInstance(props, new Authenticator() {
+        Session session = Session.getInstance(properties, new javax.mail.Authenticator() {
+            @Override
             protected PasswordAuthentication getPasswordAuthentication() {
-                return new PasswordAuthentication(username, password);
+                return new PasswordAuthentication("ivandolgolaptev@gmail.com", "gois zgqo btrk ufyi");
             }
         });
 
+        session.setDebug(true);
         try {
-            // Создание объекта сообщения
-            Message emailMessage = new MimeMessage(session);
+            Message message = new MimeMessage(session);
+            message.setFrom(new InternetAddress("ivandolgolaptev@gmail.com"));
+            message.setRecipient(Message.RecipientType.TO, new InternetAddress("ivandolgolaptev@gmail.com"));
+            message.setSubject("Тема письма");
+            message.setText("Сообщение в письме");
 
-            // Установка параметров сообщения
-            emailMessage.setFrom(new InternetAddress(username));
-            emailMessage.setRecipients(Message.RecipientType.TO, InternetAddress.parse(recipientEmail));
-            emailMessage.setSubject(subject);
-            emailMessage.setText(message);
-
-            // Отправка письма
-            Transport.send(emailMessage);
-
-            // Отправка ответа клиенту
-            response.getWriter().println("Email sent successfully");
+            Transport.send(message);
+            System.out.println("Письмо успешно отправлено");
         } catch (MessagingException e) {
-            // Обработка ошибки отправки письма
-            response.getWriter().println("Failed to send email: " + e.getMessage());
-        }*/
+            System.out.println("Письмо не отправлено");
+            e.printStackTrace();
+        }
     }
 }
