@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.Base64;
 import java.util.Optional;
 
 @WebServlet("/login")
@@ -40,7 +41,9 @@ public class LoginServlet extends HttpServlet {
         if (userByName.isPresent()){
             User user = userByName.get();
 
-            if (user.getPassword().equals(password)){
+            String decodePassword = Base64.getEncoder().encodeToString(password.getBytes());
+
+            if (user.getPassword().equals(decodePassword)){
                 req.getSession().setAttribute("user", user);
 
                 resp.sendRedirect("/pages/profile.jsp");

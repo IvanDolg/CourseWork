@@ -37,7 +37,7 @@ public class JdbcUserDao implements UserDao {
             preparedStatement.setString(3, user.getUserName());
             preparedStatement.setBytes(4, Base64.getDecoder().decode(user.getPhoto()));
             preparedStatement.setString(5, user.getEmail());
-            preparedStatement.setString(6, user.getPassword());
+            preparedStatement.setString(6, Base64.getEncoder().encodeToString(user.getPassword().getBytes()));
             preparedStatement.setString(7, user.getRole());
             preparedStatement.setInt(8, user.getCountry().getId());
 
@@ -107,7 +107,6 @@ public class JdbcUserDao implements UserDao {
                         resultSet.getInt(10),
                         resultSet.getString(11)
                 );
-
                 user.setCountry(country);
 
                 return Optional.of(user);

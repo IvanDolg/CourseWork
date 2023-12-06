@@ -8,7 +8,7 @@ import java.util.regex.Pattern;
 public class Validator {
     private final Pattern EMAIL_PATTERN = Pattern.compile("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$");
     private final Pattern NAME_SURNAME_PATTERN = Pattern.compile("^[A-Z][a-zA-Z]*$");
-    private final Pattern PASSWORD_PATTERN = Pattern.compile("^(?=.*?[A-Z])(?=(.*[a-z]){1,})(?=(.*[\\d]){1,})(?=(.*[\\W]){1,})(?!.*\\s).{8,}$");
+    private final Pattern PASSWORD_PATTERN = Pattern.compile("^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#&()–[{}]:;',?/*~$^+=<>]).{8,20}$");
     private final Pattern USERNAME_PATTERN = Pattern.compile("^(?!.*[.!,{}?|/+=#$%^&*]$)[A-Za-z0-9][A-Za-z0-9.!,{}?|/+=#$%^&*]{0,18}[A-Za-z0-9]$");
 
     public boolean validate(User user) {

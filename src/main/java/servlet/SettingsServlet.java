@@ -66,7 +66,7 @@ public class SettingsServlet extends HttpServlet {
             user.setCountry(country);
             user.setPhoto(Base64.getEncoder().encodeToString(photo.readAllBytes()));
             user.setEmail(email);
-            user.setPassword(password);
+            user.setPassword(Base64.getEncoder().encodeToString(password.getBytes()));
             user.setRole(role);
 
             if (!validator.validate(user)) {
