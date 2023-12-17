@@ -56,6 +56,10 @@
                     </li>
                 </c:if>
 
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="/allUsers">AllUsers</a>
+                </li>
+
                 <c:if test="${user != null}">
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="/logout"><%=logout%></a>
@@ -84,10 +88,6 @@
                     </c:if>
                 </ul>
             </ul>
-            <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit"><%=button%></button>
-            </form>
 
         </div>
     </div>

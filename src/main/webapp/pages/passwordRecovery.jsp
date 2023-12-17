@@ -19,7 +19,7 @@
     <div class="row">
         <div class="row justify-content-center">
             <div class="col-md-6 mt-3">
-                <form action="/sendEmail" method="post" name="emailAddress">
+                <form action="/sendEmail" method="post">
 
                     <div class="form-floating mb-3">
                         <input type="email" name="email" class="form-control" id="email" placeholder="name4@example.com" required pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$">

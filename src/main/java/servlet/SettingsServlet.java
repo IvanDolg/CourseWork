@@ -58,7 +58,7 @@ public class SettingsServlet extends HttpServlet {
             InputStream photo = req.getPart(PHOTO).getInputStream();
             String email = req.getParameter(EMAIL);
             String password = req.getParameter(PASSWORD);
-            String role = req.getParameter(ROLE);
+            int role = Integer.parseInt(req.getParameter(ROLE));
 
             user.setName(name);
             user.setSurname(surname);
@@ -67,7 +67,7 @@ public class SettingsServlet extends HttpServlet {
             user.setPhoto(Base64.getEncoder().encodeToString(photo.readAllBytes()));
             user.setEmail(email);
             user.setPassword(Base64.getEncoder().encodeToString(password.getBytes()));
-            user.setRole(role);
+            user.setRoles(role);
 
             if (!validator.validate(user)) {
                 req.setAttribute("invalid data", "Registration failed");

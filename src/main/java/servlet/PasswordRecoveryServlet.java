@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.Base64;
 import java.util.Optional;
 import java.util.Properties;
 
@@ -42,6 +43,8 @@ public class PasswordRecoveryServlet extends HttpServlet {
                 String userName = user.getUserName();
                 String email = user.getEmail();
                 String password = user.getPassword();
+                byte[] decodedBytes = Base64.getDecoder().decode(password);
+                String decodePassword = new String(decodedBytes);
 
                 Properties properties = new Properties();
 
@@ -64,11 +67,11 @@ public class PasswordRecoveryServlet extends HttpServlet {
                     message.setFrom(new InternetAddress(SENDER_EMAIL_ADDRESS));
                     message.setRecipient(Message.RecipientType.TO, new InternetAddress(emailAddress));
                     message.setSubject("Данные для входа в свою учетную запись");
-                    message.setText("Имя:" + name + "\n" +
+                    message.setText("Имя: " + name + "\n" +
                             "Фамилия: " + surname + "\n" +
                             "Имя пользователя: " + userName + "\n" +
                             "Почта: " + email + "\n" +
-                            "Пароль: " + password);
+                            "Пароль: " + decodePassword);
 
                     Transport.send(message);
 

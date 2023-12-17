@@ -4,8 +4,11 @@ import config.JdbcConnection;
 import entity.Country;
 import entity.User;
 
+import javax.swing.event.ListDataEvent;
 import java.sql.*;
+import java.util.ArrayList;
 import java.util.Base64;
+import java.util.List;
 import java.util.Optional;
 
 public class JdbcUserDao implements UserDao {
@@ -16,6 +19,8 @@ public class JdbcUserDao implements UserDao {
     private final String GET_BY_EAIL = "select * from \"human\" where \"human\".email = ?";
     private final String UPDATE_USER_DATA = "UPDATE human SET name = ?, surname = ?, username = ?, country_id = ?, photo = ?, email = ?, password = ?, role = ?\n" +
                                             "WHERE id = ?";
+    private final String GET_ALL_USERS = "SELECT id, name, surname, username, email, password FROM human";
+    private final String DELETE_BY_ID = "DELETE FROM human WHERE id=?";
 
     public JdbcUserDao() {
     }
@@ -38,7 +43,7 @@ public class JdbcUserDao implements UserDao {
             preparedStatement.setBytes(4, Base64.getDecoder().decode(user.getPhoto()));
             preparedStatement.setString(5, user.getEmail());
             preparedStatement.setString(6, Base64.getEncoder().encodeToString(user.getPassword().getBytes()));
-            preparedStatement.setString(7, user.getRole());
+            preparedStatement.setInt(7, user.getRoles());
             preparedStatement.setInt(8, user.getCountry().getId());
 
             preparedStatement.execute();
@@ -65,7 +70,7 @@ public class JdbcUserDao implements UserDao {
                 user.setPhoto(Base64.getEncoder().encodeToString(resultSet.getBytes(5)));
                 user.setEmail(resultSet.getString(6));
                 user.setPassword(resultSet.getString(7));
-                user.setRole(resultSet.getString(8));
+                user.setRoles(resultSet.getInt(8));
 
                 Country country = new Country(
                         resultSet.getInt(10),
@@ -100,8 +105,11 @@ public class JdbcUserDao implements UserDao {
                 user.setUserName(resultSet.getString(4));
                 user.setPhoto(Base64.getEncoder().encodeToString(resultSet.getBytes(5)));
                 user.setEmail(resultSet.getString(6));
-                user.setPassword(resultSet.getString(7));
-                user.setRole(resultSet.getString(8));
+                String password = resultSet.getString(7);
+                byte[] decodedBytes = Base64.getDecoder().decode(password);
+                String decodePassword = new String(decodedBytes);
+                user.setPassword(decodePassword);
+                user.setRoles(resultSet.getInt(8));
 
                 Country country = new Country(
                         resultSet.getInt(10),
@@ -156,10 +164,55 @@ public class JdbcUserDao implements UserDao {
             preparedStatement.setBytes(5, Base64.getDecoder().decode(user.getPhoto()));
             preparedStatement.setString(6, user.getEmail());
             preparedStatement.setString(7, user.getPassword());
-            preparedStatement.setString(8, user.getRole());
+            preparedStatement.setInt(8, user.getRoles());
             preparedStatement.setInt(9, user.getId());
 
             preparedStatement.executeUpdate();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    @Override
+    public List<User> getAllUsers() {
+        List<User> userList = new ArrayList<>();
+
+        try(Connection connection = JdbcConnection.getConnection();
+            PreparedStatement preparedStatement = connection.prepareStatement(GET_ALL_USERS)){
+
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            while (resultSet.next()){
+                User user = new User();
+
+                user.setId(resultSet.getInt("id"));
+                user.setName(resultSet.getString("name"));
+                user.setSurname(resultSet.getString("surname"));
+                user.setUserName(resultSet.getString("username"));
+                user.setEmail(resultSet.getString("email"));
+
+                String password = resultSet.getString("password");
+                byte[] decodedBytes = Base64.getDecoder().decode(password);
+                String decodePassword = new String(decodedBytes);
+
+                user.setPassword(decodePassword);
+
+                userList.add(user);
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return userList;
+    }
+
+    @Override
+    public void deleteHuman(int id) {
+        try(Connection connection = JdbcConnection.getConnection();
+            PreparedStatement preparedStatement = connection.prepareStatement(DELETE_BY_ID)){
+
+            preparedStatement.setInt(1,id);
+            preparedStatement.execute();
+
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }

@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.beans.Statement;
 import java.io.IOException;
 
-@WebServlet(urlPatterns = "/")
+@WebServlet("/")
 public class HomeSetvlet extends HttpServlet {
     private final ExercisesService exercisesService = ExercisesService.getInstance();
     @Override

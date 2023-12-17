@@ -4,6 +4,7 @@ import entity.User;
 import dao.UserDao.JdbcUserDao;
 import dao.UserDao.UserDao;
 
+import java.util.List;
 import java.util.Optional;
 
 public class UserService {
@@ -35,4 +36,11 @@ public class UserService {
     public Optional<User> getUserByEmail(String email){return userStorage.getUserByEmail(email);}
 
     public void update(User user){userStorage.update(user);}
+
+    public List<User> getAllUsers(){
+        return userStorage.getAllUsers();
+    }
+    public void deleteHuman(int id){
+        userStorage.deleteHuman(id);
+    }
 }

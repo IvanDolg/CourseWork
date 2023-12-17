@@ -9,12 +9,12 @@ import java.util.Optional;
 
 public class JdbcCityDao implements CityDao {
     private static JdbcCityDao instance;
-    private final String GET_BY_ID_SQL_SCRIPT = "SELECT * FROM \"сity\" JOIN \"сountry\"\n" +
-            "on \"сountry\".id = \"сity\".country_id\n" +
-            "WHERE \"сity\".id = ?";
-    private final String GET_BY_NAME_SQL_SCRIPT = "SELECT * FROM \"сity\" JOIN \"сountry\"\n" +
-            "on \"сountry\".id = \"сity\".country_id\n" +
-            "WHERE \"сity\".name = ?;";
+    private final String GET_BY_ID_SQL_SCRIPT = "SELECT * FROM city JOIN country\n" +
+            "on country.id = city.country_id\n" +
+            "WHERE city.id = ?";
+    private final String GET_BY_NAME_SQL_SCRIPT = "SELECT * FROM city JOIN country\n" +
+            "on country.id = city.country_id\n" +
+            "WHERE city.name = ?";
     private JdbcCityDao() {
     }
     public static JdbcCityDao getInstance(){

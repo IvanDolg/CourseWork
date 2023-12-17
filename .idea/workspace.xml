@@ -10,11 +10,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="98be2790-27bb-4a94-83cd-595220cdf43b" name="Changes" comment="fix: send email">
+      <change afterPath="$PROJECT_DIR$/src/main/java/entity/Role.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/servlet/AllUsersServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/servlet/DeletePersonServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/servlet/FindUserServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/allUserAdmin.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/findUser.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scriots/insertTestData.sql" beforeDir="false" afterPath="$PROJECT_DIR$/scriots/insertTestData.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scriots/scheme.sql" beforeDir="false" afterPath="$PROJECT_DIR$/scriots/scheme.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/CityDao/JdbcCityDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/CityDao/JdbcCityDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dao/UserDao/JdbcUserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/UserDao/JdbcUserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/LoginServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/UserDao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/UserDao/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/filter/LocalizationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/filter/LocalizationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/HomeSetvlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/HomeSetvlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/PasswordRecoveryServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/PasswordRecoveryServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/RegistrationServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/RegistrationServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/servlet/SettingsServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/SettingsServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/Validator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/Validator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/massage_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/massage_en.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/massage_ru.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/massage_ru.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/_header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/_header.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/passwordRecovery.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/passwordRecovery.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/reg.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/reg.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,18 +41,21 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CodyActiveAccount">
-    <option name="activeAccountId" value="6c1c958c-ce5d-46d1-954b-0c7cb0493cf7" />
+    <option name="activeAccountId" value="9946f28f-b366-4943-99fd-0f0ac44c256d" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Jsp File" />
         <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="5" />
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -58,6 +80,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "Tomcat Server.Tomcat.executor": "Run",
     "WebServerToolWindowFactoryState": "false",
+    "dart.analysis.tool.window.visible": "false",
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
@@ -70,7 +93,7 @@
     "project.structure.last.edited": "Facets",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.selected.configurable": "File.Encoding",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -175,7 +198,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-17.0.9-corretto-17.0.9-3183f394aec4-86fc8109" />
+        <option value="jdk-17.0.9-corretto-17.0.9-3183f394aec4-8f899f12" />
       </set>
     </attachedChunks>
   </component>
@@ -222,6 +245,9 @@
       <workItem from="1701893715366" duration="1479000" />
       <workItem from="1701895208434" duration="30000" />
       <workItem from="1701895247448" duration="5531000" />
+      <workItem from="1702634490155" duration="2867000" />
+      <workItem from="1702639161739" duration="12380000" />
+      <workItem from="1702769414560" duration="8631000" />
     </task>
     <task id="LOCAL-00001" summary="fix bag">
       <option name="closed" value="true" />

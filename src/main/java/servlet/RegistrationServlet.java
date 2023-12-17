@@ -51,7 +51,7 @@ public class RegistrationServlet extends HttpServlet {
         String username = req.getParameter(USERNAME);
         String email = req.getParameter(EMAIL);
         String password = req.getParameter(PASSWORD);
-        String role = req.getParameter(ROLE);
+        int role = Integer.parseInt(req.getParameter(ROLE));
         Country country = countryService.getById(Integer.parseInt(req.getParameter(COUNTRY))).orElse(new Country());
 
         User user = User.builder()
@@ -61,7 +61,7 @@ public class RegistrationServlet extends HttpServlet {
                 .email(email)
                 .password(password)
                 .country(country)
-                .role(role)
+                .roles(role)
                 .photo(Base64.getEncoder().encodeToString(photoInputStream.readAllBytes()))
                 .build();
 

@@ -15,8 +15,9 @@ import java.nio.charset.StandardCharsets;
 import java.util.Locale;
 import java.util.Properties;
 
-@WebFilter(urlPatterns = {"/login", "/reg", "/settings", "/localization",  "/profile" ,"/pages/locale.jsp",
-        "/pages/_header.jsp", "/pages/login.jsp", "/pages/reg.jsp", "/pages/settings.jsp", "/pages/profile.jsp", "/"})
+@WebFilter(urlPatterns = {"/login", "/reg", "/settings", "/localization",  "/profile" ,"/allUsers", "/pages/locale.jsp",
+        "/pages/_header.jsp", "/pages/login.jsp", "/pages/reg.jsp", "/pages/settings.jsp", "/pages/profile.jsp",
+        "/pages/allUserAdmin.jsp", "/"})
 public class LocalizationFilter extends HttpFilter {
     @Override
     protected void doFilter(HttpServletRequest req, HttpServletResponse res, FilterChain chain) throws IOException, ServletException {

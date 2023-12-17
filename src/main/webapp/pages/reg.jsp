@@ -78,10 +78,10 @@
         <label for="password"><%=password%></label>
       </div>
 
-      <select name="role" class="form-select mb-3" aria-label="Default select example">
+      <select name="role" class="form-select mb-3" aria-label="Default select example" hidden>
         <option selected><%=role%></option>
-        <option value="ADMIN">Admin</option>
-        <option value="USER">User</option>
+        <option value="0">Admin</option>
+        <option value="1" selected>User</option>
 
       </select>
 
