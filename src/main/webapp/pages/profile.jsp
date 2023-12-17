@@ -73,10 +73,14 @@
             </div>
 
             <div class="row mb-3">
-                <label for="role" class="col-sm-6"><b><h3><%=role%></h3></b></label>
+                <label for="role" class="col-sm-6">
+                    <b><h3><%=role%></h3></b>
+                </label>
                 <div class="col-sm-5">
                     <div class="row" id="role">
-                        <b><h3>${user.getRole()}</h3></b>
+                        <b><h3>
+                            ${user.getRoles() == 0 ? 'Admin' : 'User'}
+                        </h3></b>
                     </div>
                 </div>
             </div>

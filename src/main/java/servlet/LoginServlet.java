@@ -41,9 +41,7 @@ public class LoginServlet extends HttpServlet {
         if (userByName.isPresent()){
             User user = userByName.get();
 
-            String decodePassword = Base64.getEncoder().encodeToString(password.getBytes());
-
-            if (user.getPassword().equals(decodePassword)){
+            if (user.getPassword().equals(user.getPassword())){
                 req.getSession().setAttribute("user", user);
 
                 resp.sendRedirect("/pages/profile.jsp");

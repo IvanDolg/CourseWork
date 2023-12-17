@@ -56,10 +56,6 @@
                     </li>
                 </c:if>
 
-                <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="/allUsers">AllUsers</a>
-                </li>
-
                 <c:if test="${user != null}">
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="/logout"><%=logout%></a>
@@ -83,8 +79,10 @@
                 </c:if>
 
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <c:if test="${user == 'ADMIN'}">
-                        // написать, реализацию для Админа)
+                    <c:if test="${user.roles == '0'}">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="/allUsers">AllUsers</a>
+                        </li>
                     </c:if>
                 </ul>
             </ul>

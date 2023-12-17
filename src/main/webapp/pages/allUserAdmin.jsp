@@ -68,6 +68,13 @@ Created by IntelliJ IDEA.
                     </c:forEach>
                     </tbody>
                 </table>
+
+                <form action="${pageContext.request.contextPath}/allUsers" method="post">
+                    <div class="d-grid gap-2 col-3 mx-auto mb-3">
+                        <input type="hidden" name="action" value="saveToFile">
+                        <button class="btn btn-dark" type="submit">Сохранить в файл</button>
+                    </div>
+                </form>
             </div>
         </form>
     </div>

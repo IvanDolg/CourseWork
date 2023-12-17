@@ -73,12 +73,6 @@
                 <label for="password"><%=password%></label>
             </div>
 
-            <select name="role" class="form-select mb-3" aria-label="Default select example">
-                <option selected><%=role%></option>
-                <option value="ADMIN">Admin</option>
-                <option value="USER">User</option>
-            </select>
-
             <div class="d-grid gap-2 col-6 mx-auto">
                 <button class="btn btn-dark" type="submit"><%=button%></button>
             </div>

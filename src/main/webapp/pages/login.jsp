@@ -35,7 +35,7 @@ Created by IntelliJ IDEA.
 
 
         <div class="form-floating mb-3">
-          <input type="text" name="userName" class="form-control" id="username" placeholder="name3@example.com" required pattern="\w*">
+          <input type="text" name="userName" class="form-control" id="username" placeholder="name3@example.com">
           <label for="username"><%=username%></label>
           <div id="username" class="form-text">We'll never share your email with anyone else.</div>
 
@@ -47,7 +47,7 @@ Created by IntelliJ IDEA.
       </div>
 
       <div class="form-floating mb-3">
-        <input type="password"  name="password" class="form-control" id="password" placeholder="Password" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$">
+        <input type="password"  name="password" class="form-control" id="password" placeholder="Password">
         <label for="password"><%=password%></label>
         <c:if test="${passwordStatus != null}">
           <div class="alert alert-danger" role="alert">
